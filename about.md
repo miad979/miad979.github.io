@@ -1,15 +1,11 @@
 ---
 layout: page
-title: About
+title: "About Me"
 permalink: /about/
 ---
 
-Some information about you!
+I am a dedicated and motivated Computer Science and Engineering undergraduate at the **Green University of Bangladesh**[cite: 1]. My academic and professional focus areas center around Artificial Intelligence, Machine Learning, Deep Learning research, and Networking and Cybersecurity [cite: 1].
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+### Academic Excellence
+* **Dean Award** – Green University of Bangladesh (Recognized for outstanding academic milestones)[cite: 1]
+* **Vice Chancellor Award** – Green University of Bangladesh (Honored for exceptional, consistent high achievement)[cite: 1]
