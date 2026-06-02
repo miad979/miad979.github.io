@@ -4,41 +4,61 @@ title: About Me
 permalink: /about/
 ---
 
-# About Me
+# Executive Profile
 
-## 👋 Hello! I'm Md Miadul Islam Nizzan
+<div class="about-hero-grid">
+  <div>
+    <p style="font-size: 18px; line-height: 1.6; color: var(--text-main);">
+      I am a final-year Computer Science and Engineering undergraduate student at the <strong>Green University of Bangladesh</strong>, specializing in machine learning pipelines, network security frameworks, and full-stack system architecture[cite: 1]. I focus on translating complex computational theory into high-performance, real-world technology assets[cite: 1].
+    </p>
+  </div>
+</div>
 
-I am a driven and detail-oriented final-year Computer Science and Engineering undergraduate student at the **Green University of Bangladesh**[cite: 1].An unyielding passion for computing systems, I have spent my academic journey bridging the gap between theoretical computer science and practical, real-world engineering implementations[cite: 1]. 
+<!-- Premium Metrics Dashboard Panel -->
+<div class="about-metrics-container">
+  <div class="metric-pill">
+    <span class="metric-value">2+</span>
+    <span class="metric-label">Academic Awards[cite: 1]</span>
+  </div>
+  <div class="metric-pill">
+    <span class="metric-value">10+</span>
+    <span class="metric-label">Engineered Projects[cite: 1]</span>
+  </div>
+  <div class="metric-pill">
+    <span class="metric-value">IEEE</span>
+    <span class="metric-label">Branch Vice Chair[cite: 1]</span>
+  </div>
+</div>
 
-My academic dedication has been recognized through both the prestigious **Vice Chancellor’s Award** and the **Dean's Award** for academic excellence[cite: 1].
+<div class="about-highlight-card">
+  <p>"Recognized with both the <strong>Vice Chancellor’s Award</strong> and the <strong>Dean's Award</strong> for outstanding academic achievement and sustained excellence in engineering studies."[cite: 1]</p>
+</div>
 
 ---
 
-## 🚀 My Technical Focus
+<div class="about-section-block" style="margin-top: 40px;">
+  <h3>🎯 Core Technical Mandate</h3>
+  <p>My methodology centers on creating robust, secure, and intelligent software architectures. I deliberately focus on three interconnected segments of the modern computing landscape:</p>
+  <ul>
+    <li><strong>Deep Learning Architectures:</strong> Custom-tuning neural network topologies (such as MobileNetV2 and basic CNN layers) for localized object recognition and forecasting engines[cite: 1].</li>
+    <li><strong>Infrastructure & Network Security:</strong> Analyzing data packets, understanding low-level hardware constraints, and researching enterprise networking layouts via dedicated industrial training[cite: 1].</li>
+    <li><strong>Systems Engineering:</strong> Building production-ready client-server interfaces using asynchronous socket communication, clean relational database layers (MySQL/SQLite), and low-level digital logic simulations[cite: 1].</li>
+  </ul>
+</div>
 
-My engineering interests lie at the intersection of intelligent systems, secure data exchange, and robust infrastructure[cite: 1]. I actively focus on:
-* **Artificial Intelligence & Deep Learning:** Architecting and training convolutional neural networks (such as MobileNetV2 profiles) for real-world computer vision tasks like plant disease diagnosis and intelligent crop forecasting.
-* **Networking & Cybersecurity:** Designing resilient, secure system topologies[cite: 1] and analyzing network packets to understand structural vulnerabilities, fortified by specialized industrial training[cite: 1].
-* **Full-Stack Software Engineering:** Developing robust client-server environments with real-time multi-user communication, smooth database layers (MySQL/SQLite), and clean interface dashboards[cite: 1].
-
-Whether designing a temperature-triggered fire suppression circuit without a microcontroller dependency[cite: 1] or writing an asynchronous backend chat engine using Python socket networks[cite: 1], I thrive on solving complex technical puzzles from the ground up.
+<div class="about-section-block">
+  <h3>👥 Organizational Leadership & Mentorship</h3>
+  <p>True engineering involves guiding teams and optimizing human networks just as efficiently as computing systems. My operational experience includes:</p>
+  <ul>
+    <li><strong>Executive Leadership:</strong> Serving as the Vice Chair of the IEEE GUB Student Branch, orchestrating branding guidelines, digital content strategies, and tech community events[cite: 1].</li>
+    <li><strong>Academic Mentorship:</strong> Working as an official Student Mentor to accelerate the learning curves of junior undergraduates in structural programming, relational databases, and core coursework planning[cite: 1].</li>
+    <li><strong>Philanthropic Coordination:</strong> Directing volunteer teams and leading logistical awareness campaigns for regional community organizations[cite: 1].</li>
+  </ul>
+</div>
 
 ---
 
-## 👥 Leadership & Beyond
-
-I strongly believe that being a great engineer requires excellent collaboration, communication, and empathy. Outside of my coursework, I dedicate a significant portion of my time to student community growth and social impact:
-
-* **IEEE GUB Student Branch (Vice Chair):** I lead and coordinate student activities, manage corporate branding, and orchestrate technical programs to support the next generation of engineers[cite: 1].
-* **Academic Mentorship:** As an official Student Mentor at my university, I guide junior students through foundational programming concepts, data tracking, and technical coursework layouts[cite: 1].
-* **Community Service:** I have a long-standing commitment to volunteering, having served as a Joint Organizing Secretary for blood donation awareness[cite: 1] and managing local volunteer logistics[cite: 1].
-
----
-
-## ⚡ Quick Facts
-* **Current Location:** Dhaka, Bangladesh (Originally from Bhaluka, Mymensingh)[cite: 1]
-* **Core Toolkit:** Python, Java, C++, PHP, SQL, LaTeX, and Git[cite: 1]
-* **Soft Skills:** Public Speaking, Presenting, Anchoring, and Team Leadership[cite: 1]
-* **When I'm not coding:** You can find me participating in competitive debates[cite: 1] or coordinating community events[cite: 1].
-
-Thank you for visiting my portfolio! Feel free to explore my [Projects](/projects/) or take a look at my full [Curriculum Vitae](/resume/).
+### ⚡ Technical Coordinates
+* **Primary Stack:** Python, Java, C++, PHP, SQL, Assembly, LaTeX[cite: 1]
+* **Key Specializations:** Deep Learning, Packet Analysis, OS Simulations, Desktop UI Development[cite: 1]
+* **Interpersonal Assets:** Public Speaking, Institutional Anchoring, Group Governance, Technical Writing[cite: 1]
