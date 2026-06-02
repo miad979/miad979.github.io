@@ -1,8 +1,23 @@
+# --- Site Settings ---
+title: "Md Miadul Islam Nizzan"
 name: "Md Miadul Islam Nizzan"
-description: "Computer Science & Engineering Student | AI/ML, Deep Learning & Cybersecurity Enthusiast"
+description: "Computer Science & Engineering Student | AI/ML, Deep Learning,Networking & Cybersecurity Enthusiast"
+url: "https://miad979.github.io"
+avatar: "/assets/images/profile.jpg"
 
+# --- Professional Biography ---
 bio: "Final-year Computer Science and Engineering undergraduate at the Green University of Bangladesh (CGPA: 3.70) and recipient of the Vice Chancellor and Dean’s Awards for academic excellence[cite: 1]. I am deeply passionate about applying technology to solve real-world problems, with a strong focus on Artificial Intelligence, Machine Learning, Deep Learning, and secure systems architecture[cite: 1]. Alongside my studies, I actively drive community engagement and technical programs as the Vice Chair of the IEEE GUB Student Branch while gaining industry exposure through specialized training in Networking and Cybersecurity[cite: 1]."
 
+# --- Contact & Social Identifiers ---
+email: "nijjon12@gmail.com"
+phone: "01325753313"
+location: "Bhaluka, Mymensingh, Bangladesh"
+
+# --- Social Media Usernames (For Footer Icons) ---
+github_username: "miad979"
+linkedin_username: "md-miadul-islam-nizzan" 
+
+# --- Custom 10-Tier Site Navigation Layout ---
 navigation:
   - title: "About Me"
     url: /about/
@@ -24,3 +39,10 @@ navigation:
     url: /ieee/
   - title: "Contact"
     url: /contact/
+
+# --- Jekyll Internals ---
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+paginate: 5
+exclude: ["LESS_", "node_modules", "Gruntfile.js", "package.json", "README.md"]
