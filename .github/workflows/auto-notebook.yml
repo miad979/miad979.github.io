@@ -1,0 +1,83 @@
+```yaml
+name: Auto Process Jupyter Notebooks
+
+on:
+  push:
+    paths:
+      - '**/*.ipynb' # Triggers whenever any .ipynb file is uploaded
+
+jobs:
+  organize-notebook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Move Notebook and Generate Pointer Post
+        run: |
+          python -c "
+          import os
+          from datetime import datetime
+
+          # Target directories
+          posts_dir = '_posts'
+          assets_dir = 'assets/jupyter'
+          
+          os.makedirs(posts_dir, exist_ok=True)
+          os.makedirs(assets_dir, exist_ok=True)
+
+          # Find any .ipynb file that is NOT currently in the assets/jupyter folder
+          for root, dirs, files in os.walk('.'):
+              # Skip checking our designated target directory to prevent infinite loops
+              if assets_dir in root or '.github' in root or '.git' in root:
+                  continue
+                  
+              for file in files:
+                  if file.endswith('.ipynb'):
+                      old_path = os.path.join(root, file)
+                      new_notebook_path = os.path.join(assets_dir, file)
+                      
+                      print(f'Found newly uploaded notebook: {old_path}')
+                      
+                      # 1. Move the notebook file to assets/jupyter
+                      os.rename(old_path, new_notebook_path)
+                      
+                      # 2. Generate a clean title from the filename
+                      clean_title = os.path.splitext(file)[0].replace('_', ' ').replace('-', ' ').title()
+                      current_date = datetime.now().strftime('%Y-%m-%d 12:00:00 +0600')
+                      file_date = datetime.now().strftime('%Y-%m-%d')
+                      
+                      # 3. Create the matching markdown pointer file name
+                      pointer_filename = f'{file_date}-{os.path.splitext(file)[0]}.md'
+                      pointer_path = os.path.join(posts_dir, pointer_filename)
+                      
+                      # 4. Write the al-folio post front matter configuration
+                      front_matter = f'''---
+                      layout: post
+                      title: \"{clean_title}\"
+                      date: {current_date}
+                      categories: [machine-learning, deep-learning]
+                      ipynb: {file}
+                      ---
+                      '''
+                      
+                      with open(pointer_path, 'w', encoding='utf-8') as f:
+                          f.write(front_matter.strip())
+                          
+                      print(f'Successfully created pointer file: {pointer_path}')
+          "
+
+      - name: Commit and Push Changes Back to GitHub
+        uses: stefanzwei/github-actions-commit-push@v1
+        with:
+          commit_message: "automated: organized notebook assets and generated jekyll pointer"
