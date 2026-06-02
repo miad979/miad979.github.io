@@ -1,165 +1,124 @@
 ---
 layout: default
-title: Projects
-permalink: /projects/
+title: Resume
+permalink: /resume/
 ---
 
-# Technical Project Portfolio
+# Curriculum Vitae
 
-A comprehensive directory of my engineering initiatives spanning Artificial Intelligence, deep learning architectures, full-stack software systems, and hardware design.
-
-<div class="project-grid">
-
-  <div class="portfolio-card">
-    <div class="project-header">
-      <h3>🌾 Smart Farming Ecosystem</h3>
-      <div class="tech-tags">
-        <span class="tech-badge">MobileNetV2</span>
-        <span class="tech-badge">CNN</span>
-        <span class="tech-badge">IoT</span>
-        <span class="tech-badge">Python</span>
-      </div>
-      <p class="project-desc">An integrated intelligent agricultural engine featuring localized plant disease detection via optimized neural networks, crop yield forecasting, smart automated irrigation controls, and precise fertilizer recommendation parameters.</p>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/miad979" target="_blank">💻 View Code</a>
-    </div>
-  </div>
-
-  <div class="portfolio-card">
-    <div class="project-header">
-      <h3>⚡ AI-Driven Self-Healing Networks</h3>
-      <div class="tech-tags">
-        <span class="tech-badge">Deep Learning</span>
-        <span class="tech-badge">Reinforcement Learning</span>
-        <span class="tech-badge">SDN</span>
-      </div>
-      <p class="project-desc">An advanced network optimization topology utilizing deep reinforcement learning loops to map, predict, isolate, and auto-remediate routing faults within high-throughput infrastructure environments.</p>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/miad979" target="_blank">💻 View Code</a>
-    </div>
-  </div>
-
-  <div class="portfolio-card">
-    <div class="project-header">
-      <h3>🏥 MEDeLIFE EHR System</h3>
-      <div class="tech-tags">
-        <span class="tech-badge">Full-Stack Web</span>
-        <span class="tech-badge">Secure DB</span>
-        <span class="tech-badge">Data Security</span>
-      </div>
-      <p class="project-desc">A secure, patient-centric universal electronic health record ecosystem enabling digital storage, encryption protocols, and verified cross-sharing of clinical prescriptions and medical diagnostic data between practitioners.</p>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/miad979" target="_blank">💻 View Code</a>
-    </div>
-  </div>
-
-  <div class="portfolio-card">
-    <div class="project-header">
-      <h3>🤖 AI Chatbot Web Application</h3>
-      <div class="tech-tags">
-        <span class="tech-badge">OpenAI API</span>
-        <span class="tech-badge">Python Sockets</span>
-        <span class="tech-badge">PHP</span>
-        <span class="tech-badge">JavaScript</span>
-      </div>
-      <p class="project-desc">Developed an AI-integrated chatbot with fluid real-time client-server communication using custom backend socket programming for optimized asynchronous query handling.</p>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/miad979" target="_blank">💻 View Code</a>
-    </div>
-  </div>
-
-  <div class="portfolio-card">
-    <div class="project-header">
-      <h3>💬 Multi-User Java Messenger</h3>
-      <div class="tech-tags">
-        <span class="tech-badge">Java Swing</span>
-        <span class="tech-badge">SQLite</span>
-        <span class="tech-badge">AI Integration</span>
-      </div>
-      <p class="project-desc">Designed a real-time multi-client messaging desk application with robust local database-backed storage structures and an integrated automated AI reply engine.</p>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/miad979" target="_blank">💻 View Code</a>
-    </div>
-  </div>
-
-  <div class="portfolio-card">
-    <div class="project-header">
-      <h3>🏫 Department Management System</h3>
-      <div class="tech-tags">
-        <span class="tech-badge">Java Swing</span>
-        <span class="tech-badge">MySQL</span>
-        <span class="tech-badge">XAMPP</span>
-      </div>
-      <p class="project-desc">Built a database-driven institutional management desk app handling complex structural CRUD routines, relational student mapping, and UI view control mapping panels.</p>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/miad979" target="_blank">💻 View Code</a>
-    </div>
-  </div>
-
-  <div class="portfolio-card">
-    <div class="project-header">
-      <h3>⚙️ Operating System Simulation</h3>
-      <div class="tech-tags">
-        <span class="tech-badge">C / C++</span>
-        <span class="tech-badge">OS Kernels</span>
-        <span class="tech-badge">Algorithms</span>
-      </div>
-      <p class="project-desc">Simulated foundational kernel processing mechanics including core CPU scheduling pipelines (FCFS, SJF, Round Robin), safe memory management paging grids, and logical deadlock detection matrices.</p>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/miad979" target="_blank">💻 View Code</a>
-    </div>
-  </div>
-
-  <div class="portfolio-card">
-    <div class="project-header">
-      <h3>🔢 ALU Interface & Simulation</h3>
-      <div class="tech-tags">
-        <span class="tech-badge">Python GUI</span>
-        <span class="tech-badge">Digital Logic</span>
-        <span class="tech-badge">Computer Architecture</span>
-      </div>
-      <p class="project-desc">Designed a functional visual model of an Arithmetic Logic Unit executing micro-op low-level logic traces with an integrated real-time graphical representation interface dashboard.</p>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/miad979" target="_blank">💻 View Code</a>
-    </div>
-  </div>
-
-  <div class="portfolio-card">
-    <div class="project-header">
-      <h3>💓 Automatic Pulse Rate Detector</h3>
-      <div class="tech-tags">
-        <span class="tech-badge">Hardware Design</span>
-        <span class="tech-badge">Signal Processing</span>
-        <span class="tech-badge">Bio-Sensors</span>
-      </div>
-      <p class="project-desc">Engineered an analog diagnostic hardware unit capturing fine biological signal metrics with distinct hardware processing components to register real-time heart rate patterns.</p>
-    </div>
-    <div class="project-links">
-      <span style="font-size: 13px; color: $text-muted;">🛠️ Physical Prototype</span>
-    </div>
-  </div>
-
-  <div class="portfolio-card">
-    <div class="project-header">
-      <h3>🔥 Autonomous Fire Extinguisher</h3>
-      <div class="tech-tags">
-        <span class="tech-badge">Circuit Design</span>
-        <span class="tech-badge">Analog Hardware</span>
-        <span class="tech-badge">Automation</span>
-      </div>
-      <p class="project-desc">Designed a standalone, microcontroller-independent electronic circuit matrix that leverages thermal threshold sensors to immediately trigger fluid safety valves upon heat detection.</p>
-    </div>
-    <div class="project-links">
-      <span style="font-size: 13px; color: $text-muted;">🛠️ Circuit Layout Completed</span>
-    </div>
-  </div>
-
+<div class="resume-header-links" style="margin-bottom: 30px; font-size: 15px;">
+  <strong>📍 Location:</strong> Bhaluka, Mymensingh, Bangladesh <br>
+  <strong>✉️ Email:</strong> nijjon12@gmail.com | <strong>📞 Phone:</strong> 01325753313 <br>
+  <strong>🌐 Links:</strong> 
+  <a href="https://github.com/miad979" target="_blank">GitHub</a> | 
+  <a href="https://linkedin.com/in/md-miadul-islam-nizzan" target="_blank">LinkedIn</a> | 
+  <a href="https://collabratec.ieee.org/" target="_blank">IEEE Collabratec</a>
 </div>
+
+---
+
+## 🎯 Professional Objective
+
+Dedicated and motivated Computer Science and Engineering undergraduate with a strong academic background and hands-on experience in software development, networking, artificial intelligence, and research. Proficient in programming, data management, and digital productivity tools. Skilled in project development, technical documentation, report preparation, and collaborative teamwork. Actively involved in IEEE volunteer activities and research initiatives, with a growing interest in Artificial Intelligence, Machine Learning, Cybersecurity, and Network Systems. Passionate about applying technology to solve real-world problems while continuously developing professional and technical expertise.
+
+---
+
+## 🎓 Education
+
+### **Bachelor of Science in Computer Science and Engineering (CSE)**
+*Green University of Bangladesh*  
+* **CGPA:** 3.70 / 4.00 (Current)
+* **Location & Timeline:** Rupganj, Narayanganj, Dhaka | 2023 – Present
+
+### **Higher Secondary Certificate (HSC)**
+*Royal Media College*  
+* **GPA:** 4.89 / 5.00  
+* **Location & Timeline:** Mymensingh, Bangladesh | 2021
+
+### **Secondary School Certificate (SSC)**
+*Shaheen Cadet School*  
+* **GPA:** 4.72 / 5.00  
+* **Location & Timeline:** Bhaluka, Mymensingh, Bangladesh | 2019
+
+---
+
+## 🏆 Academic Excellence & Honors
+
+* **Vice Chancellor Award** — *Green University of Bangladesh*  
+  Recognized for academic excellence and consistent high achievement.
+* **Dean Award** — *Green University of Bangladesh*  
+  Awarded for outstanding academic performance.
+* **Debate Champion** — *Royal Media College*  
+  Secured the championship title in the inter-college debate competition (2020).
+
+---
+
+## 💼 Experience & Industrial Training
+
+### **Industrial Trainee — Networking & Cybersecurity**
+*Goinnovior IT Service BD | Business Automation Solutions*  
+* **Timeline:** 2025 – Present | Mirpur-12, Dhaka  
+* Gained hands-on knowledge regarding enterprise networking infrastructure and cybersecurity protocols.
+* Developed essential soft skills, collaborating directly with industry practitioners and managing client requirements.
+
+### **Student Mentor**
+*Green University of Bangladesh*  
+* **Timeline:** 2025 – Present | Purbachal American City, Dhaka  
+* Guided junior students in academic planning, foundational coding concepts, and technical coursework.
+* Assisted faculty in organizing academic support structures, peer-learning blocks, and targeted workshops.
+
+### **Assistant Teacher**
+*Kolatoli Darus Sunnah Al Arabiah Madrashah*  
+* **Timeline:** 2023 – 2024 | Rupganj, Dhaka, Bangladesh  
+* Conducted structured academic lessons and mentored students, building strong communication and instructional leadership skills.
+
+---
+
+## 🛠️ Technical Skills
+
+| Category | Proficiencies |
+| :--- | :--- |
+| **Programming Languages** | C, C++, Python, Java, x86 Assembly |
+| **Web Technologies** | HTML, CSS, JavaScript, PHP |
+| **Databases** | MySQL, SQLite, SQL |
+| **Networking Concepts** | TCP/IP, Network Fundamentals, Packet Analysis |
+| **Tools & Platforms** | GitHub, NetBeans, XAMPP, VS Code, LaTeX, MS Office |
+| **Soft Skills** | Leadership, Public Speaking, Presentation, Mentorship, Event Coordination, Anchoring |
+
+---
+
+## 👥 Leadership Experience & Professional Memberships
+
+### **Professional Membership**
+* **IEEE Member** | *ID: 101091506* (2025 – Present)
+
+### **IEEE GUB Student Branch**
+* **Vice Chair** *(2026 – 2027)*  
+  Led and coordinated student body initiatives, technical seminars, and major organizational events.
+* **Assistant Graphic Designer** *(2025 – 2026)*  
+  Oversaw layout formatting, asset branding, event promotional materials, and digital content strategy while collaborating closely with the executive panel.
+
+### **Community & Social Work**
+* **Joint Organizing Secretary** *(2020)* | *Dhumketu Blood Foundation*  
+  Coordinated regional social awareness campaigns and targeted community outreach programs.
+* **Event Organizing Secretary** *(2020)* | *Dhitpur Boys Club*  
+  Managed local youth programs, community engagement events, and supervised volunteer logistics.
+
+---
+
+## 📄 Academic References
+
+1. **Mr. Syed Ahsanul Kabir**  
+   Chairperson & Associate Professor, Department of CSE  
+   *Green University of Bangladesh*  
+   📧 Email: kabir@cse.green.edu.bd  
+
+2. **Professor Dr. Md. Ahsan Habib**  
+   Chairperson, Department of CSE  
+   *Bangladesh University of Business and Technology*  
+   📧 Email: ahsan.habib.tareq@gmail.com  
+
+3. **Tanpia Tasnim**  
+   Lecturer and Program Coordinator, Department of CSE  
+   *Green University of Bangladesh*  
+   📧 Email: tanpia@cse.green.edu.bd
