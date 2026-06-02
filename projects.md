@@ -1,54 +1,65 @@
 ---
-layout: page
-title: "Projects"
+layout: default
+title: Projects
 permalink: /projects/
 ---
 
-### 🤖 Artificial Intelligence & Software Systems
+# Featured Engineering Projects
 
-* **AI Chatbot Web Application**  
-  *Tech Stack: HTML, CSS, JavaScript, PHP, Python Socket, OpenAI API*[cite: 2]  
-  * Developed an AI-integrated chatbot with real-time client-server communication[cite: 2].  
-  * Implemented backend socket programming for response handling[cite: 2].
+A showcase of my systems engineering, deep learning architectures, and academic research implementations.
 
-* **Multi-User Java Messenger with AI Integration**  
-  *Tech Stack: Java Swing, SQLite*[cite: 2]  
-  * Designed a real-time messaging system with database-backed storage[cite: 2].  
-  * Integrated an AI-based automated response system[cite: 2].
+<div class="project-grid">
 
-* **Department Management System**  
-  *Tech Stack: Java Swing, MySQL, XAMPP*[cite: 2]  
-  * Built a database-driven academic management platform[cite: 2].  
-  * Implemented CRUD operations and structured UI navigation[cite: 2].
+  <!-- Project Card 1: Smart Farming -->
+  <div class="portfolio-card">
+    <div class="project-header">
+      <h3>🌾 Smart Farming Ecosystem</h3>
+      <div class="tech-tags">
+        <span class="tech-badge">MobileNetV2</span>
+        <span class="tech-badge">CNN</span>
+        <span class="tech-badge">IoT</span>
+        <span class="tech-badge">Python</span>
+      </div>
+      <p class="project-desc">An integrated intelligent agricultural engine featuring localized plant disease detection, crop yield forecasting models, smart automated irrigation scripts, and precise fertilizer recommendation parameters.</p>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/miad979" target="_blank">💻 View Code</a>
+      <a href="#" target="_blank">📄 Documentation</a>
+    </div>
+  </div>
 
-* **Smart Farming Automation System**  
-  *Tech Stack: IoT Concept, Sensors, Data Monitoring*[cite: 2]  
-  * Designed an intelligent farming support system for monitoring soil moisture and environmental conditions[cite: 2].  
-  * Implemented automated irrigation control logic based on real-time sensor data[cite: 2].  
-  * Focused on optimizing water usage and improving agricultural productivity using smart technology[cite: 2].
+  <!-- Project Card 2: AI-Driven Self-Healing Networks -->
+  <div class="portfolio-card">
+    <div class="project-header">
+      <h3>⚡ AI-Driven Self-Healing Networks</h3>
+      <div class="tech-tags">
+        <span class="tech-badge">Deep Learning</span>
+        <span class="tech-badge">Reinforcement Learning</span>
+        <span class="tech-badge">SDN</span>
+      </div>
+      <p class="project-desc">An advanced network optimization topology utilizing deep reinforcement learning loops to map, predict, isolate, and auto-remediate routing faults within high-throughput infrastructure environments.</p>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/miad979" target="_blank">💻 View Code</a>
+      <a href="#" target="_blank">🔬 Research Abstract</a>
+    </div>
+  </div>
 
----
+  <!-- Project Card 3: MEDeLIFE Platform -->
+  <div class="portfolio-card">
+    <div class="project-header">
+      <h3>🏥 MEDeLIFE EHR System</h3>
+      <div class="tech-tags">
+        <span class="tech-badge">Full-Stack</span>
+        <span class="tech-badge">Secure Database</span>
+        <span class="tech-badge">Web Architecture</span>
+      </div>
+      <p class="project-desc">A secure, patient-centric universal electronic health record ecosystem enabling digital storage, encryption protocols, and verified cross-sharing of clinical prescriptions and medical diagnostic data between practitioners.</p>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/miad979" target="_blank">💻 View Code</a>
+      <a href="#" target="_blank">🌐 Live Demo</a>
+    </div>
+  </div>
 
-### ⚙️ Systems & Hardware Engineering
-
-* **Operating System Simulation Project**  
-  *Tech Stack: C / C++*[cite: 2]  
-  * Implemented core OS concepts including Process Scheduling algorithms (FCFS, SJF, Round Robin)[cite: 2].  
-  * Simulated memory management techniques such as Paging and Deadlock Detection[cite: 2].  
-  * Analyzed system performance metrics and CPU utilization efficiency[cite: 2].
-
-* **Arithmetic Logic Unit (ALU) Integration with GUI**  
-  *Tech Stack: Python, Digital Logic Design*[cite: 2]  
-  * Designed and simulated a functional ALU supporting arithmetic and logical operations[cite: 2].  
-  * Integrated a graphical user interface for dynamic input-output visualization[cite: 2].  
-  * Demonstrated understanding of low-level processor architecture and instruction execution flow[cite: 2].
-
-* **Automatic Pulse Rate Detection System**  
-  *Tech Stack: Hardware Implementation*[cite: 2]  
-  * Designed a hardware-based heart rate monitoring system[cite: 2].  
-  * Implemented signal detection and measurement techniques[cite: 2].
-
-* **Automatic Fire Extinguisher System**  
-  *Tech Stack: Electronic Circuit Design*[cite: 2]  
-  * Developed a temperature-triggered fire suppression mechanism[cite: 2].  
-  * Designed a circuit without microcontroller dependency[cite: 2].
+</div>
