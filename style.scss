@@ -1,289 +1,324 @@
 ---
+# Jekyll front matter ensures Sass is compiled cleanly
 ---
 
-//
-// IMPORTS
-//
+// ==========================================
+// 1. PREMIUM CYBER-TECH PALETTE & FONTS
+// ==========================================
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
 
-@import "reset";
-@import "variables";
-// Syntax highlighting @import is at the bottom of this file
+$bg-dark: #0b0f19;        // Deep space premium dark background
+$bg-card: #151b2c;        // Sleek card background container
+$text-main: #f3f4f6;      // Crisp white text
+$text-muted: #9ca3af;     // Soft gray for descriptions
+$accent-primary: #00dfd8; // Vibrant electric cyan for primary highlights
+$accent-secondary: #0070f3; // Deep premium tech blue
+$border-color: #222c44;   // Subtle modern grid border
 
-/**************/
-/* BASE RULES */
-/**************/
-
-html {
-  font-size: 100%;
+// Global Resets
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
+  background-color: $bg-dark;
+  color: $text-main;
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.6;
+  padding-bottom: 60px;
+}
+
+// ==========================================
+// 2. SMOOTH GLOBAL PAGE FADE-IN ANIMATION
+// ==========================================
+#main {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 0 30px;
+  animation: premiumFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes premiumFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ==========================================
+// 3. ANIMATED GLOWING HEADER & NAVIGATION
+// ==========================================
+.wrapper-masthead {
+  background: rgba($bg-card, 0.7);
+  backdrop-filter: blur(12px); // Modern glassmorphism blur
+  border-bottom: 1px solid $border-color;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 15px 0;
 }
 
 .container {
+  max-width: 1100px;
   margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
-  font-weight: bold;
-
-  line-height: 1.7;
-  margin: 1em 0 15px;
-  padding: 0;
-
-  @include mobile {
-    line-height: 1.4;
-  }
-}
-
-h1 {
-  font-size: 30px;
-  a {
-    color: inherit;
-  }
-}
-
-h2 {
-  font-size: 24px;
-}
-
-h3 {
-  font-size: 20px;
-}
-
-h4 {
-  font-size: 18px;
-  color: $gray;
-}
-
-p {
-  margin: 15px 0;
-}
-
-a {
-  color: $blue;
-  text-decoration: none;
-	cursor: pointer;
-  &:hover, &:active {
-    color: $blue;
-  }
-}
-
-ul, ol {
-  margin: 15px 0;
-  padding-left: 30px;
-}
-
-ul {
-  list-style-type: disc;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-ol ul, ul ol, ul ul, ol ol {
-  margin: 0;
-}
-
-ul ul, ol ul {
-  list-style-type: circle;
-}
-
-em, i {
-  font-style: italic;
-}
-
-strong, b {
-  font-weight: bold;
-}
-
-img {
-  max-width: 100%;
-}
-
-// Fixes images in popup boxes from Google Translate
-.gmnoprint img {
-  max-width: none;
-}
-
-.date {
-  font-style: italic;
-  color: $gray;
-}
-
-// Specify the color of the selection
-::-moz-selection {
-  color: $black;
-  background: $lightGray;
-}
-::selection {
-  color: $black;
-  background: $lightGray;
-}
-
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*********************/
-/* LAYOUT / SECTIONS */
-/*********************/
-
-//
-// .masthead
-//
-
-.wrapper-masthead {
-  margin-bottom: 50px;
+  padding: 0 30px;
 }
 
 .masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-  @include mobile {
-    text-align: center;
-  }
-}
-
-.site-avatar {
-  float: left;
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
-
-  @include mobile {
-    float: none;
+  .site-avatar {
     display: block;
-    margin: 0 auto;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid $accent-primary;
+    box-shadow: 0 0 15px rgba($accent-primary, 0.3);
+    transition: transform 0.4s ease;
+
+    &:hover {
+      transform: rotate(360deg) scale(1.05); // Playful premium rotation
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
-  img {
-    border-radius: 5px;
-  }
-}
-
-.site-info {
-  float: left;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-.site-name {
-  margin: 0;
-  color: $darkGray;
-  cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
-  font-size: 28px;
-  letter-spacing: 1px;
-}
-
-.site-description {
-  margin: -5px 0 0 0;
-  color: $gray;
-  font-size: 16px;
-
-  @include mobile {
-    margin: 3px 0;
-  }
-}
-
-nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
-  font-size: 18px;
-
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
-
-  a {
+  .site-info {
+    flex-grow: 1;
     margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
 
-    @include mobile {
-      margin: 0 10px;
-      color: $blue;
+    .site-name a {
+      color: $text-main;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, $text-main, $accent-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .site-description {
+      color: $text-muted;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+  // Horizontal Multi-Tier Menu Bar
+  nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+    a {
+      color: $text-muted;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      position: relative;
+      transition: color 0.3s ease, background 0.3s ease;
+
+      &:hover {
+        color: $accent-primary;
+        background: rgba($accent-primary, 0.08);
+      }
+
+      // Smooth underline tracker slide effect
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $accent-primary;
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
     }
   }
 }
 
-//
-// .main
-//
-
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+// ==========================================
+// 4. PREMIUM CONTENT COMPONENT VISUALIZATIONS
+// ==========================================
+h1, h2, h3, h4 {
+  color: $text-main;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
 }
 
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
+h2 {
+  border-bottom: 2px solid $border-color;
+  padding-bottom: 8px;
+  margin-top: 35px;
+  background: linear-gradient(90deg, $accent-primary, $accent-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.post {
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
-  }
+p {
+  color: $text-muted;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
 
-  .comments {
-    margin-top: 10px;
-  }
+// Automated Content Lists to Dynamic Cards Transformation
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
 
-  .read-more {
+  li {
+    background-color: $bg-card;
+    border: 1px solid $border-color;
+    padding: 18px 22px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+    // Left micro-accent bar border
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 4px;
+      background: linear-gradient(to bottom, $accent-primary, $accent-secondary);
+      opacity: 0.7;
+    }
+
+    &:hover {
+      transform: translateY(-3px) scale(1.01);
+      border-color: rgba($accent-primary, 0.4);
+      box-shadow: 0 10px 25px rgba($accent-primary, 0.08);
+    }
+
+    strong {
+      color: $accent-primary;
+      font-size: 17px;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+// Tables Styling
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  background-color: $bg-card;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid $border-color;
+
+  th {
+    background-color: rgba($accent-secondary, 0.2);
+    color: $accent-primary;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 14px;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  td {
+    padding: 14px 16px;
+    border-bottom: 1px solid $border-color;
+    color: $text-muted;
     font-size: 15px;
   }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
 }
 
+// Blockquotes / Special Mentions
+blockquote {
+  background: linear-gradient(90deg, rgba($accent-secondary, 0.15), transparent);
+  border-left: 4px solid $accent-secondary;
+  padding: 15px 20px;
+  margin: 25px 0;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: $text-main;
+}
+
+// ==========================================
+// 5. ANIMATED MULTI-NETWORK FOOTER
+// ==========================================
 .wrapper-footer {
-  margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
-}
-
-footer {
-  padding: 20px 0;
+  border-top: 1px solid $border-color;
+  background-color: rgba($bg-card, 0.4);
+  padding: 40px 0;
+  margin-top: 80px;
   text-align: center;
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
-@import "svg-icons";
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+
+  svg {
+    fill: $text-muted;
+    width: 26px;
+    height: 26px;
+    transition: fill 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+
+    &:hover {
+      fill: $accent-primary;
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 8px $accent-primary);
+    }
+  }
+}
+
+// Responsive layout scaling for mobile screens
+@media (max-width: 768px) {
+  .masthead {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    
+    .site-info {
+      margin-left: 0;
+    }
+
+    nav {
+      justify-content: center;
+    }
+  }
+}
