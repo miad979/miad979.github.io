@@ -544,3 +544,42 @@ blockquote {
   color: $text-muted;
   margin-bottom: 12px;
 }
+// ==========================================
+// 10. PREMIUM GRID MATRIX FOR BLOG TIMELINE
+// ==========================================
+.blog-posts-feed-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.blog-post-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: rgba($accent-primary, 0.3) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+
+    .post-title-link {
+      color: $accent-primary !important;
+    }
+  }
+}
+
+// Ensure the 3-column micro dashboard looks clean across devices
+@media (max-width: 600px) {
+  .blog-structure-grid {
+    grid-template-columns: 1fr !important; // Stacks beautifully on small mobile screens
+    gap: 15px !important;
+  }
+}
+
+.grid-block {
+  padding: 5px;
+  
+  strong {
+    font-family: 'Fira Code', monospace;
+    letter-spacing: 0.5px;
+  }
+}
