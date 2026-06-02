@@ -1,4 +1,3 @@
-```yaml
 name: Auto Process Jupyter Notebooks
 
 on:
