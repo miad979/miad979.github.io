@@ -5,6 +5,17 @@
 
     {% include meta.html %}
 
+    <!-- Search Engine Optimization (SEO) Meta Tags -->
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.name }}">
+    
+    <!-- Open Graph Meta Tags (For Google Snippets & Social Card Previews) -->
+    <meta property="og:title" content="{{ site.name }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:image" content="{{ site.url }}/{{ site.avatar }}">
+
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -17,7 +28,8 @@
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+          <!-- Updated with dynamic absolute pathing to keep avatar live on subpages -->
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.url }}/{{ site.avatar }}" alt="{{ site.name }}" /></a>
 
           <div class="site-info">
             <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
