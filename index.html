@@ -2,17 +2,14 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<div class="home-intro">
+  <h2>Welcome to my Digital Portfolio</h2>
+  <p>{{ site.bio }}</p>
+</div>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+<div class="home-highlights">
+  <h3>Latest Updates</h3>
+  <blockquote>
+    Currently working on industrial systems engineering, active network security protocols, and advancing machine learning integration architectures.
+  </blockquote>
 </div>
