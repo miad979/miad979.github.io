@@ -323,3 +323,101 @@ blockquote {
     }
   }
 }
+// ==========================================
+// 6. PREMIUM RESPONSIVE PROJECT GRID
+// ==========================================
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.portfolio-card {
+  background-color: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, $accent-primary, $accent-secondary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba($accent-primary, 0.4);
+    box-shadow: 0 12px 30px rgba($accent-primary, 0.08);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  .project-header {
+    margin-bottom: 15px;
+    
+    h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      background: none;
+      -webkit-text-fill-color: initial;
+      color: $text-main;
+    }
+  }
+
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+
+  .tech-badge {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: rgba($accent-primary, 0.06);
+    color: $accent-primary;
+    border: 1px solid rgba($accent-primary, 0.15);
+  }
+
+  .project-desc {
+    font-size: 14px;
+    color: $text-muted;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 15px;
+
+    a {
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      color: $accent-primary;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $text-main;
+      }
+    }
+  }
+}
