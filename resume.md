@@ -70,7 +70,7 @@ Dedicated and motivated Computer Science and Engineering undergraduate with a st
 ### **Assistant Teacher**
 *Kolatoli Darus Sunnah Al Arabiah Madrashah*  
 * **Timeline:** 2023 – 2024 | Rupganj, Dhaka, Bangladesh  
-* Conducted structured academic lessons and mentored students, building strong communication and instructional leadership skills.
+* Conducted structured academic sessions and mentored students, building strong communication and instructional leadership skills.
 
 ---
 
