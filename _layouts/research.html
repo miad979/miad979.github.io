@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<div class="page-header reveal">
+  <p class="eyebrow">Research</p>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</div>
+
+<div class="project-grid reveal">
+  {% for item in site.data.research %}
+    <article class="portfolio-card">
+      <div>
+        <span class="tech-badge">{{ item.type }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+
+        {% if item.status %}<p><strong>Status:</strong> {{ item.status }}</p>{% endif %}
+
+        {% if item.key_points %}
+        <ul>
+          {% for point in item.key_points %}<li>{{ point }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if item.key_findings %}
+        <ul>
+          {% for finding in item.key_findings %}<li>{{ finding }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+
+      <div class="project-links">
+        {% if item.github %}<a href="{{ item.github }}" target="_blank" rel="noopener">Repository →</a>{% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</div>

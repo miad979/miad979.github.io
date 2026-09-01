@@ -1,0 +1,32 @@
+- title: "Vice Chancellor's Award"
+  organization: "Green University of Bangladesh"
+  description: "Recognized for academic excellence and consistent achievement."
+  category: "Academic"
+
+- title: "Dean's Award"
+  organization: "Green University of Bangladesh"
+  description: "Awarded for outstanding academic performance."
+  category: "Academic"
+
+- title: "Debate Champion"
+  organization: "Royal Media College"
+  year: 2020
+  description: "First place in the inter-college debate competition."
+  category: "Competition"
+
+- title: "IEEE Member"
+  organization: "IEEE"
+  year: 2025
+  description: "IEEE member, 2025 – present."
+  category: "Professional"
+
+- title: "IEEE Day Ambassador"
+  organization: "IEEE GUB Student Branch"
+  description: "IEEE Day Ambassador for 2025 and 2026."
+  category: "Leadership"
+
+- title: "STI 2025 Conference Volunteer"
+  organization: "IEEE"
+  year: 2025
+  description: "Volunteer at the IEEE Sustainable Technologies for Industry (STI) 2025 Conference."
+  category: "Service"

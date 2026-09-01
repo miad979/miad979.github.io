@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="page-header reveal">
+  <p class="eyebrow">Capabilities</p>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</div>
+
+<div class="skills-matrix reveal">
+  {% for skill_group in site.data.skills %}
+    <div class="skill-category">
+      <h3>{{ skill_group.category }}</h3>
+      <div class="skills-list">
+        {% for skill in skill_group.skills %}<span class="skill-item">{{ skill }}</span>{% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

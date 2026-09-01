@@ -1,48 +1,48 @@
-# --- Site Settings ---
 title: "Md Miadul Islam Nizzan"
 name: "Md Miadul Islam Nizzan"
-description: "Computer Science & Engineering Student | AI/ML, Deep Learning, Networking & Cybersecurity Enthusiast"
+short_name: "Miadul Nizzan"
+role: "Computer Science Undergraduate | AI/ML, NLP & AI-Driven Software"
+tagline: "Building intelligent systems, advancing AI research, and solving real-world problems through technology"
+description: "Portfolio of Md Miadul Islam Nizzan — CS undergraduate specializing in AI/ML, NLP, federated learning, and explainable AI."
 url: "https://miad979.github.io"
-avatar: "/Profile.jpg"
-
-# --- Professional Biography ---
-bio: "Final-year Computer Science and Engineering undergraduate at the Green University of Bangladesh (CGPA: 3.70) and recipient of the Vice Chancellor and Dean’s Awards for academic excellence. I am deeply passionate about applying technology to solve real-world problems, with a strong focus on Artificial Intelligence, Machine Learning, Deep Learning, and secure systems architecture. Alongside my studies, I actively drive community engagement and technical programs as the Vice Chair of the IEEE GUB Student Branch while gaining industry exposure through specialized training in Networking and Cybersecurity."
-
-# --- Contact & Social Identifiers ---
+baseurl: ""
+avatar: "/images/profile.jpg"
 email: "nijjon12@gmail.com"
-phone: "01325753313"
+phone: "+880 1325-753313"
 location: "Bhaluka, Mymensingh, Bangladesh"
-
-# --- Social Media Usernames (For Footer Icons) ---
 github_username: "miad979"
-linkedin_username: "md-miadul-islam-nizzan" 
+github_url: "https://github.com/miad979"
+linkedin_username: "md-miadul-islam-nizzan-450b70262"
+linkedin_url: "https://www.linkedin.com/in/md-miadul-islam-nizzan-450b70262/"
+ieee_url: "https://collabratec.ieee.org"
+resume_pdf: "/assets/resume.pdf"
 
-# --- Custom 10-Tier Site Navigation Layout ---
 navigation:
-  - title: "About Me"
-    url: /about/
-  - title: "Blog"
+  - title: "Home"
     url: /
+  - title: "About"
+    url: /about/
   - title: "Projects"
     url: /projects/
   - title: "Research"
     url: /research/
-  - title: "Publications"
-    url: /publications/
-  - title: "Code Snippets"
-    url: /snippets/
-  - title: "Certifications"
-    url: /certifications/
+  - title: "Skills"
+    url: /skills/
   - title: "Resume"
     url: /resume/
-  - title: "Co-Curricular"
-    url: /ieee/
   - title: "Contact"
     url: /contact/
 
-# --- Jekyll Internals ---
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
-paginate: 5
-exclude: ["LESS_", "node_modules", "Gruntfile.js", "package.json", "README.md"]
+
+# Files/folders Jekyll should not publish to the live site.
+exclude:
+  - "README.md"
+  - "MAINTENANCE.md"
+  - "LICENSE"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "node_modules"
+  - "package.json"

@@ -1,623 +1,212 @@
 ---
-# Jekyll front matter ensures Sass is compiled cleanly
 ---
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
 
-// ==========================================
-// 1. PREMIUM CYBER-TECH PALETTE & FONTS
-// ==========================================
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+$ink: #17201d; $muted: #626a66; $paper: #f4f1ea; $white: #fffdf8; $lime: #c9f27b; $green: #1d493c; $line: rgba($ink,.15);
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: $paper; color: $ink; font-family: 'DM Sans', sans-serif; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+.shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+.skip-link { position: fixed; top: -50px; left: 20px; z-index: 999; background: $ink; color: white; padding: 10px 16px; transition: top .2s; &:focus { top: 20px; } }
 
-$bg-dark: #0b0f19;        // Deep space premium dark background
-$bg-card: #151b2c;        // Sleek card background container
-$text-main: #f3f4f6;      // Crisp white text
-$text-muted: #9ca3af;     // Soft gray for descriptions
-$accent-primary: #00dfd8; // Vibrant electric cyan for primary highlights
-$accent-secondary: #0070f3; // Deep premium tech blue
-$border-color: #222c44;   // Subtle modern grid border
+.site-header { position: sticky; top: 0; z-index: 100; background: rgba($paper,.9); border-bottom: 1px solid $line; backdrop-filter: blur(16px); }
+.header-inner { height: 82px; display: flex; align-items: center; justify-content: space-between; }
+.wordmark { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-family: Manrope, sans-serif; font-weight: 700; }
+.wordmark-mark { display: grid; place-items: center; width: 40px; height: 40px; color: $paper; background: $ink; border-radius: 50%; font-size: 12px; letter-spacing: -.04em; }
+.wordmark-name { font-size: 16px; }
+.site-nav { display: flex; align-items: center; gap: 30px; a { position: relative; text-decoration: none; font-size: 14px; font-weight: 600; color: $muted; &:hover, &[aria-current='page'] { color: $ink; } } }
+.site-nav .nav-cta { padding: 11px 18px; background: $ink; color: $white; border-radius: 999px; &:hover { background: $green; color: white; } }
+.menu-toggle { display: none; border: 0; background: transparent; padding: 8px; span:not(.sr-only) { display: block; width: 24px; height: 2px; margin: 4px; background: $ink; } }
+.page-content { min-height: 60vh; padding-top: 64px; padding-bottom: 96px; }
 
-// Global Resets
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.eyebrow { margin: 0 0 18px; color: $green; text-transform: uppercase; letter-spacing: .13em; font: 700 11px/1.4 Manrope, sans-serif; }
+.status-dot { display: inline-block; width: 8px; height: 8px; margin-right: 9px; border-radius: 50%; background: #4c9b5f; box-shadow: 0 0 0 5px rgba(76,155,95,.13); }
+h1, h2, h3, h4 { margin: 0; font-family: Manrope, sans-serif; line-height: 1.1; letter-spacing: -.045em; }
+h1 { font-size: clamp(48px, 6.6vw, 88px); }
+h2 { font-size: clamp(34px, 4vw, 58px); }
+h3 { font-size: clamp(22px, 2.4vw, 32px); }
+p { color: $muted; }
+
+.hero { display: grid; grid-template-columns: 1.12fr .72fr; gap: clamp(50px, 8vw, 110px); align-items: center; min-height: 670px; padding: 36px 0 90px; }
+.hero-copy h1 em { color: $green; font-family: Georgia, serif; font-weight: 400; }
+.hero-lede { max-width: 650px; margin: 28px 0 34px; font-size: clamp(17px, 1.8vw, 21px); }
+.hero-actions { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.button { display: inline-flex; gap: 30px; align-items: center; padding: 15px 22px; border-radius: 999px; text-decoration: none; font-weight: 700; transition: transform .2s, background .2s; &:hover { transform: translateY(-2px); } }
+.button-primary { background: $ink; color: white; &:hover { background: $green; } }
+.text-link { display: inline-flex; gap: 12px; align-items: center; text-underline-offset: 5px; font-weight: 700; font-size: 14px; span { transition: transform .2s; } &:hover span { transform: translateX(4px); } }
+.portrait-frame { position: relative; max-width: 420px; margin-left: auto; }
+.portrait-frame img { position: relative; z-index: 2; width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 18%; border-radius: 220px 220px 20px 20px; filter: saturate(.85); }
+.portrait-accent { position: absolute; z-index: 1; inset: 8% -7% -6% 9%; border-radius: 220px 220px 20px 20px; background: $lime; transform: rotate(4deg); }
+.portrait-label { position: absolute; z-index: 3; left: -35px; bottom: 35px; padding: 12px 18px; background: $white; border: 1px solid $line; box-shadow: 0 12px 40px rgba($ink,.12); span, strong { display: block; } span { color: $muted; font-size: 10px; text-transform: uppercase; letter-spacing: .12em; } }
+
+.proof-strip { display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid $line; border-bottom: 1px solid $line; div { padding: 28px 24px; border-right: 1px solid $line; &:last-child { border: 0; } } strong, span { display: block; } strong { font: 700 clamp(23px,3vw,36px)/1 Manrope,sans-serif; letter-spacing: -.04em; } span { margin-top: 8px; color: $muted; font-size: 12px; } }
+.home-section { padding-top: 130px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 42px; }
+.featured-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.featured-card { position: relative; min-height: 390px; padding: 32px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; background: $white; border: 1px solid $line; transition: transform .25s, box-shadow .25s; &:hover { transform: translateY(-5px); box-shadow: 0 20px 55px rgba($ink,.09); } }
+.featured-card-wide { grid-column: 1/-1; min-height: 360px; background: $green; color: white; .project-copy p, .card-kicker, .tag-row span { color: rgba(255,255,255,.72); } .tag-row span { border-color: rgba(255,255,255,.25); } }
+.accent-card { background: $lime; }
+.project-number { font: 600 12px Manrope,sans-serif; opacity: .58; }
+.project-copy { max-width: 710px; p { max-width: 620px; } h3 { margin-bottom: 16px; } }
+.card-kicker { margin: 0 0 16px; text-transform: uppercase; letter-spacing: .1em; font-size: 10px; font-weight: 700; }
+.tag-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 24px; span { padding: 5px 10px; border: 1px solid $line; border-radius: 99px; color: $muted; font-size: 10px; font-weight: 600; } }
+.card-arrow { position: absolute; top: 26px; right: 28px; display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid currentColor; border-radius: 50%; text-decoration: none; transition: transform .2s, background .2s; &:hover { transform: rotate(12deg); background: rgba(255,255,255,.2); } }
+.split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 12vw; align-items: start; }
+.split-copy { padding-top: 22px; p { font-size: 18px; &:first-child { margin-top: 0; color: $ink; } } .text-link { margin-top: 12px; } }
+.capability-grid { display: grid; grid-template-columns: 1.35fr repeat(3,1fr); gap: 0; margin-top: 130px; border-top: 1px solid $line; border-bottom: 1px solid $line; > * { padding: 36px 24px; border-right: 1px solid $line; &:last-child { border: 0; } } article > span { color: $green; font: 700 11px Manrope,sans-serif; } article h3 { margin: 42px 0 14px; font-size: 20px; } article p { font-size: 13px; } }
+
+/* Existing content pages */
+.page-content > h1:first-child { max-width: 900px; margin-bottom: 28px; font-size: clamp(42px,6vw,72px); }
+.page-header { margin-bottom: 12px; h1 { max-width: 900px; margin: 0 0 20px; font-size: clamp(42px,6vw,72px); } p:not(.eyebrow) { max-width: 720px; font-size: 17px; } }
+.portfolio-card { justify-content: flex-start; gap: 18px; > div:first-child > .tech-badge { margin-bottom: 14px; display: inline-block; } }
+.portfolio-card .project-links { margin-top: auto; padding-top: 4px; }
+.resume-actions { display: flex; gap: 16px; flex-wrap: wrap; margin: 28px 0 40px; }
+.timeline { margin: 36px 0; border-top: 1px solid $line; }
+.timeline-item { padding: 30px 0; border-bottom: 1px solid $line; }
+.timeline-item h3 { font-size: 19px; margin-bottom: 4px; }
+.timeline-item .timeline-meta { color: $green; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; }
+.empty-state { padding: 48px 28px; background: $white; border: 1px solid $line; text-align: center; p { margin: 0; } }
+.page-content > hr { margin: 48px 0; border: 0; border-top: 1px solid $line; }
+.page-content ul, .page-content ol { color: $muted; }
+.page-content table { width: 100%; margin: 28px 0; border-collapse: collapse; background: $white; th, td { padding: 14px 16px; border: 1px solid $line; text-align: left; } th { color: $green; } }
+.project-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; margin-top: 42px; }
+.portfolio-card, .publication-card, .about-section-block, .about-highlight-card { padding: 28px; background: $white !important; border: 1px solid $line !important; border-radius: 0 !important; transition: transform .2s; &:hover { transform: translateY(-3px); } }
+.portfolio-card { display: flex; flex-direction: column; justify-content: space-between; min-height: 330px; h3 { font-size: 24px; } }
+.tech-tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 18px 0; }
+.tech-badge, .pub-status-badge { padding: 5px 9px !important; border: 1px solid $line; border-radius: 99px !important; background: transparent !important; color: $green !important; font-size: 10px !important; }
+.project-links a, .pub-links a { color: $green !important; font-weight: 700; text-underline-offset: 4px; }
+.about-metrics-container { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin: 36px 0; }
+.metric-pill { padding: 24px; background: $green; color: white; .metric-value,.metric-label { display: block; } .metric-value { font: 700 32px Manrope,sans-serif; } .metric-label { color: rgba(255,255,255,.68); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; } }
+input, textarea { font: inherit; } button { font: inherit; }
+.contact-panel { max-width: 780px; margin: 58px 0; padding: clamp(28px,5vw,54px); background: $lime; h2 { margin-bottom: 18px; } p:not(.eyebrow) { max-width: 610px; color: rgba($ink,.72); } .button { margin-top: 12px; } }
+.writing-list { margin-top: 58px; border-top: 1px solid $line; }
+.writing-item { padding: 42px 0; border-bottom: 1px solid $line; h2 { margin-bottom: 14px; a { text-decoration: none; &:hover { color: $green; } } } p:not(.eyebrow) { max-width: 760px; } }
+
+.site-footer { padding: 80px 0 28px; background: $ink; color: $white; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; padding-bottom: 75px; }
+.footer-kicker { color: rgba(255,255,255,.55); text-transform: uppercase; letter-spacing: .13em; font-size: 11px; }
+.footer-title { color: white; text-decoration-thickness: 2px; text-underline-offset: 9px; font: 600 clamp(38px,6vw,76px)/1.1 Manrope,sans-serif; letter-spacing: -.05em; }
+.footer-links { display: flex; flex-direction: column; gap: 14px; justify-content: end; a { display: flex; justify-content: space-between; padding: 10px 0; color: white; border-bottom: 1px solid rgba(255,255,255,.18); text-decoration: none; } }
+.footer-base { display: flex; justify-content: space-between; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.15); color: rgba(255,255,255,.48); font-size: 11px; }
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; &.is-visible { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; transition: none !important; } .reveal { opacity: 1; transform: none; } }
+
+@media (max-width: 860px) {
+  .shell { width: min(100% - 32px, 1180px); } .menu-toggle { display: block; } .site-nav { display: none; position: absolute; top: 82px; left: 0; right: 0; padding: 22px 24px; background: $paper; border-bottom: 1px solid $line; flex-direction: column; align-items: stretch; &.is-open { display: flex; } .nav-cta { text-align: center; } }
 }
 
-body {
-  background-color: $bg-dark;
-  color: $text-main;
-  font-family: 'Inter', -apple-system, sans-serif;
-  line-height: 1.6;
-  padding-bottom: 60px;
-}
-
-// ==========================================
-// 2. SMOOTH GLOBAL PAGE FADE-IN ANIMATION
-// ==========================================
-#main {
-  max-width: 950px;
-  margin: 40px auto;
-  padding: 0 30px;
-  animation: premiumFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes premiumFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-// ==========================================
-// 3. ANIMATED GLOWING HEADER & NAVIGATION
-// ==========================================
-.wrapper-masthead {
-  background: rgba($bg-card, 0.7);
-  backdrop-filter: blur(12px); // Modern glassmorphism blur
-  border-bottom: 1px solid $border-color;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  padding: 15px 0;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 30px;
-}
-
-.masthead {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
- .site-avatar {
-    display: block;
-    width: 85px;          // Increased size from 55px to 85px for better visibility
-    height: 85px;         // Keeps it perfectly proportional
-    border-radius: 12px;  // Changes it from a circle to a sleek, modern square with smooth corners
-    overflow: hidden;
-    border: 2px solid $accent-primary;
-    box-shadow: 0 0 20px rgba($accent-primary, 0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    &:hover {
-      transform: scale(1.05); // Removes the full spin and replaces it with a clean, premium hover lift
-      box-shadow: 0 0 25px rgba($accent-primary, 0.45);
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .site-info {
-    flex-grow: 1;
-    margin-left: 20px;
-
-    .site-name a {
-      color: $text-main;
-      text-decoration: none;
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, $text-main, $accent-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    .site-description {
-      color: $text-muted;
-      font-size: 13px;
-      font-weight: 400;
-    }
-  }
-
-  // Horizontal Multi-Tier Menu Bar
-  nav {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-
-    a {
-      color: $text-muted;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      padding: 6px 12px;
-      border-radius: 6px;
-      position: relative;
-      transition: color 0.3s ease, background 0.3s ease;
-
-      &:hover {
-        color: $accent-primary;
-        background: rgba($accent-primary, 0.08);
-      }
-
-      // Smooth underline tracker slide effect
-      &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: $accent-primary;
-        transform-origin: bottom right;
-        transition: transform 0.3s ease-out;
-      }
-
-      &:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
-    }
-  }
-}
-
-// ==========================================
-// 4. PREMIUM CONTENT COMPONENT VISUALIZATIONS
-// ==========================================
-h1, h2, h3, h4 {
-  color: $text-main;
-  margin-bottom: 15px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-}
-
-h2 {
-  border-bottom: 2px solid $border-color;
-  padding-bottom: 8px;
-  margin-top: 35px;
-  background: linear-gradient(90deg, $accent-primary, $accent-secondary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-p {
-  color: $text-muted;
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-// Automated Content Lists to Dynamic Cards Transformation
-ul {
-  list-style: none;
+/* Projects Grid Styles */
+.projects-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-  margin-bottom: 30px;
-
-  li {
-    background-color: $bg-card;
-    border: 1px solid $border-color;
-    padding: 18px 22px;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-
-    // Left micro-accent bar border
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 4px;
-      background: linear-gradient(to bottom, $accent-primary, $accent-secondary);
-      opacity: 0.7;
-    }
-
-    &:hover {
-      transform: translateY(-3px) scale(1.01);
-      border-color: rgba($accent-primary, 0.4);
-      box-shadow: 0 10px 25px rgba($accent-primary, 0.08);
-    }
-
-    strong {
-      color: $accent-primary;
-      font-size: 17px;
-      display: inline-block;
-      margin-bottom: 4px;
-    }
-  }
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
 }
 
-// Tables Styling
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 25px 0;
-  background-color: $bg-card;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid $border-color;
-
-  th {
-    background-color: rgba($accent-secondary, 0.2);
-    color: $accent-primary;
-    text-align: left;
-    padding: 12px 16px;
-    font-weight: 600;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  td {
-    padding: 14px 16px;
-    border-bottom: 1px solid $border-color;
-    color: $text-muted;
-    font-size: 15px;
-  }
-
-  tr:last-child td {
-    border-bottom: none;
-  }
-}
-
-// Blockquotes / Special Mentions
-blockquote {
-  background: linear-gradient(90deg, rgba($accent-secondary, 0.15), transparent);
-  border-left: 4px solid $accent-secondary;
-  padding: 15px 20px;
-  margin: 25px 0;
-  border-radius: 0 8px 8px 0;
-  font-style: italic;
-  color: $text-main;
-}
-
-// ==========================================
-// 5. ANIMATED MULTI-NETWORK FOOTER
-// ==========================================
-.wrapper-footer {
-  border-top: 1px solid $border-color;
-  background-color: rgba($bg-card, 0.4);
-  padding: 40px 0;
-  margin-top: 80px;
-  text-align: center;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-
-  svg {
-    fill: $text-muted;
-    width: 26px;
-    height: 26px;
-    transition: fill 0.3s ease, transform 0.3s ease, filter 0.3s ease;
-
-    &:hover {
-      fill: $accent-primary;
-      transform: scale(1.2);
-      filter: drop-shadow(0 0 8px $accent-primary);
-    }
-  }
-}
-
-// Responsive layout scaling for mobile screens
-@media (max-width: 768px) {
-  .masthead {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-    
-    .site-info {
-      margin-left: 0;
-    }
-
-    nav {
-      justify-content: center;
-    }
-  }
-}
-// ==========================================
-// 6. PREMIUM RESPONSIVE PROJECT GRID
-// ==========================================
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
-}
-
-.portfolio-card {
-  background-color: $bg-card;
-  border: 1px solid $border-color;
+.project-card {
+  padding: 28px;
+  background: $white;
+  border: 1px solid $line;
   border-radius: 12px;
-  padding: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, $accent-primary, $accent-secondary);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px);
-    border-color: rgba($accent-primary, 0.4);
-    box-shadow: 0 12px 30px rgba($accent-primary, 0.08);
-
-    &::before {
-      opacity: 1;
-    }
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba($ink, 0.12);
   }
 
-  .project-header {
-    margin-bottom: 15px;
-    
-    h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
-      background: none;
-      -webkit-text-fill-color: initial;
-      color: $text-main;
-    }
-  }
+  h3 { font-size: 20px; margin: 0 0 16px; }
+  p { font-size: 14px; line-height: 1.6; }
 
-  .tech-tags {
+  .project-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 15px;
+    margin: 16px 0;
   }
 
-  .tech-badge {
-    font-family: 'Fira Code', monospace;
-    font-size: 11px;
-    font-weight: 500;
-    padding: 3px 10px;
-    border-radius: 6px;
-    background: rgba($accent-primary, 0.06);
-    color: $accent-primary;
-    border: 1px solid rgba($accent-primary, 0.15);
-  }
-
-  .project-desc {
-    font-size: 14px;
-    color: $text-muted;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-
-  .project-links {
-    display: flex;
-    gap: 15px;
-
-    a {
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-      color: $accent-primary;
-      transition: color 0.2s ease;
-
-      &:hover {
-        color: $text-main;
-      }
-    }
-  }
-}
-// ==========================================
-// 7. PREMIUM ABOUT ME STYLES
-// ==========================================
-.about-hero-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  margin-bottom: 40px;
-}
-
-.about-highlight-card {
-  background: rgba($accent-primary, 0.03);
-  border: 1px dashed rgba($accent-primary, 0.25);
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px 0;
-  
-  p {
-    margin: 0;
-    font-style: italic;
-    color: $text-main;
-  }
-}
-
-.about-metrics-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  margin: 30px 0;
-}
-
-.metric-pill {
-  background: $bg-card;
-  border: 1px solid $border-color;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    border-color: rgba($accent-primary, 0.4);
-    box-shadow: 0 5px 15px rgba($accent-primary, 0.05);
-  }
-
-  .metric-value {
-    font-family: 'Fira Code', monospace;
-    font-size: 24px;
-    font-weight: 700;
-    color: $accent-primary;
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  .metric-label {
+  .project-tag {
+    padding: 4px 10px;
+    background: rgba($green, 0.08);
+    color: $green;
+    border-radius: 20px;
     font-size: 12px;
-    color: $text-muted;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: 600;
   }
 }
 
-.about-section-block {
-  margin-bottom: 40px;
-  
-  h3 {
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: $accent-primary;
-    margin-bottom: 15px;
-    border-bottom: 1px solid $border-color;
-    padding-bottom: 8px;
+/* Skills Matrix */
+.skills-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.skill-category {
+  padding: 28px;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: 12px;
+
+  h3 { font-size: 18px; margin: 0 0 12px; }
+
+  .skill-level {
+    color: $green;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 16px;
   }
-}
-// ==========================================
-// 8. RESEARCH & PUBLICATIONS STYLES
-// ==========================================
-.publication-card {
-  background: $bg-card;
-  border-left: 4px solid $accent-primary;
-  border-top: 1px solid $border-color;
-  border-right: 1px solid $border-color;
-  border-bottom: 1px solid $border-color;
-  border-radius: 0 8px 8px 0;
-  padding: 25px;
-  margin-bottom: 25px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
 
-  &:hover {
-    transform: translateX(5px);
-    border-color: rgba($accent-primary, 0.3);
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
   }
-}
 
-.pub-status-badge {
-  font-family: 'Fira Code', monospace;
-  font-size: 11px;
-  text-transform: uppercase;
-  padding: 2px 8px;
-  border-radius: 4px;
-  background: rgba($accent-primary, 0.1);
-  color: $accent-primary;
-  font-weight: 600;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.pub-authors {
-  font-size: 14px;
-  color: $text-main;
-  margin: 5px 0;
-  
-  strong {
-    color: $accent-primary;
+  .skill-item {
+    padding: 6px 12px;
+    background: rgba($green, 0.1);
+    color: $green;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
   }
 }
 
-.pub-venue {
-  font-size: 13px;
-  font-style: italic;
-  color: $text-muted;
-  margin-bottom: 12px;
-}
-// ==========================================
-// 10. PREMIUM GRID MATRIX FOR BLOG TIMELINE
-// ==========================================
-.blog-posts-feed-container {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+/* Stats Section */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
 }
 
-.blog-post-card {
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+.stat-card {
+  text-align: center;
+  padding: 24px;
 
-  &:hover {
-    transform: translateY(-2px);
-    border-color: rgba($accent-primary, 0.3) !important;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+  .stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
 
-    .post-title-link {
-      color: $accent-primary !important;
-    }
+  .stat-label {
+    color: $muted;
+    font-size: 12px;
   }
 }
-
-// Ensure the 3-column micro dashboard looks clean across devices
-@media (max-width: 600px) {
-  .blog-structure-grid {
-    grid-template-columns: 1fr !important; // Stacks beautifully on small mobile screens
-    gap: 15px !important;
-  }
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; min-height: 0; padding-top: 20px; } .hero-visual { max-width: 430px; margin: auto; } .proof-strip { grid-template-columns: 1fr 1fr; div:nth-child(2) { border-right: 0; } div:nth-child(-n+2) { border-bottom: 1px solid $line; } }
+  .split-section, .capability-grid { grid-template-columns: 1fr; gap: 35px; } .capability-grid > * { border-right: 0; border-bottom: 1px solid $line; }
 }
-
-.grid-block {
-  padding: 5px;
-  
-  strong {
-    font-family: 'Fira Code', monospace;
-    letter-spacing: 0.5px;
-  }
-}
-// ==========================================
-// 11. REUSABLE POST TEXT FORMATTING
-// ==========================================
-.post-content {
-  h2 {
-    font-size: 22px;
-    color: $accent-primary;
-    margin-top: 35px;
-    margin-bottom: 15px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid $border-color;
-  }
-  
-  h3 {
-    font-size: 18px;
-    color: $text-main;
-    margin-top: 25px;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: $text-main;
-    margin-bottom: 20px;
-  }
-
-  ul, ol {
-    margin-bottom: 20px;
-    padding-left: 20px;
-    
-    li {
-      color: $text-main;
-      margin-bottom: 6px;
-      line-height: 1.6;
-    }
-  }
+@media (max-width: 620px) {
+  .page-content { padding-top: 42px; } .wordmark-name { display: none; } .hero { padding-bottom: 64px; } .hero-actions { align-items: flex-start; flex-direction: column; } .portrait-label { left: -5px; }
+  .section-heading { align-items: flex-start; flex-direction: column; gap: 24px; } .featured-grid, .project-grid { grid-template-columns: 1fr; } .featured-card-wide { grid-column: auto; } .featured-card { min-height: 380px; padding: 24px; }
+  .about-metrics-container { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; } .footer-base { flex-direction: column; gap: 8px; }
 }

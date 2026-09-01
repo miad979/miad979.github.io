@@ -1,64 +1,66 @@
 ---
-layout: default
-title: About Me
+layout: page
+title: "About Me"
 permalink: /about/
+description: "Learn about my background, interests, and what drives my work in AI/ML and software engineering."
 ---
 
-# Executive Profile
+I'm {{ site.name }}, a Computer Science and Engineering undergraduate at Green University of Bangladesh with a strong academic record and project experience spanning artificial intelligence, machine learning, natural language processing, computer vision, multi-agent systems, software engineering, networking, and embedded systems.
 
-<div class="about-hero-grid">
-  <div>
-    <p style="font-size: 18px; line-height: 1.6; color: var(--text-main);">
-      I am a final-year Computer Science and Engineering undergraduate student at the <strong>Green University of Bangladesh</strong>, specializing in machine learning pipelines, network security frameworks, and full-stack system architecture. I focus on translating complex computational theory into high-performance, real-world technology assets.
-    </p>
+## Background
+
+I'm currently pursuing my B.Sc. in Computer Science and Engineering, expected January 2027, with a current CGPA of 3.70 / 4.00. I've been recognized with both the Vice Chancellor's Award and the Dean's Award for academic performance at Green University of Bangladesh.
+
+Beyond coursework, I serve as **Vice Chair of the IEEE GUB Student Branch** and as a **Student Mentor**, guiding junior students through academic planning, technical coursework, and project work.
+
+## Research interests
+
+Bangla natural language processing; social-media safety and online-harassment detection; retrieval-augmented generation; intelligent agents; computer vision; trustworthy and explainable AI; federated learning; AI for cybersecurity; network security.
+
+## Current work
+
+- **Undergraduate thesis** — Robustness, explainability, and attribution stability of lightweight vision transformers for federated chest X-ray classification under non-IID client distributions.
+- **Manuscript submitted** — Robustness and tokenization stability of transformer models for 12-class Bangla dialect classification under character-level perturbations, submitted to the 2026 IEEE 8th International Conference on Sustainable Technologies for Industry 5.0 (STI).
+- **Research in progress** — Multilevel detection of social media harassment targeting women, including dataset curation and text-classification model fine-tuning.
+
+[See the full research page →]({{ '/research/' | relative_url }})
+
+## Education
+
+<div class="timeline">
+{% for entry in site.data.education %}
+  <div class="timeline-item">
+    <p class="timeline-meta">{{ entry.year | default: entry.status }}</p>
+    <h3>{{ entry.degree }}</h3>
+    <p>{{ entry.institution }} — {{ entry.location }}{% if entry.cgpa %} · CGPA {{ entry.cgpa }}{% endif %}{% if entry.gpa %} · GPA {{ entry.gpa }}{% endif %}</p>
   </div>
+{% endfor %}
 </div>
 
-<!-- Premium Metrics Dashboard Panel -->
-<div class="about-metrics-container">
-  <div class="metric-pill">
-    <span class="metric-value">2+</span>
-    <span class="metric-label">Academic Awards</span>
+## Leadership & mentorship
+
+<div class="timeline">
+{% for role in site.data.experience %}
+  <div class="timeline-item">
+    <p class="timeline-meta">{{ role.start_date }} – {{ role.end_date }}</p>
+    <h3>{{ role.title }} · {{ role.organization }}</h3>
+    <p>{{ role.description }}</p>
   </div>
-  <div class="metric-pill">
-    <span class="metric-value">10+</span>
-    <span class="metric-label">Engineered Projects</span>
+{% endfor %}
+</div>
+
+## Awards & recognition
+
+<div class="timeline">
+{% for award in site.data.awards %}
+  <div class="timeline-item">
+    <p class="timeline-meta">{{ award.organization }}{% if award.year %} · {{ award.year }}{% endif %}</p>
+    <h3>{{ award.title }}</h3>
+    <p>{{ award.description }}</p>
   </div>
-  <div class="metric-pill">
-    <span class="metric-value">IEEE</span>
-    <span class="metric-label">Branch Vice Chair</span>
-  </div>
+{% endfor %}
 </div>
 
-<div class="about-highlight-card">
-  <p>"Recognized with both the <strong>Vice Chancellor’s Award</strong> and the <strong>Dean's Award</strong> for outstanding academic achievement and sustained excellence in engineering studies."</p>
-</div>
+## What drives me
 
----
-
-<div class="about-section-block" style="margin-top: 40px;">
-  <h3>🎯 Core Technical Mandate</h3>
-  <p>My methodology centers on creating robust, secure, and intelligent software architectures. I deliberately focus on three interconnected segments of the modern computing landscape:</p>
-  <ul>
-    <li><strong>Deep Learning Architectures:</strong> Custom-tuning neural network topologies (such as MobileNetV2 and basic CNN layers) for localized object recognition and forecasting engines.</li>
-    <li><strong>Infrastructure & Network Security:</strong> Analyzing data packets, understanding low-level hardware constraints, and researching enterprise networking layouts via dedicated industrial training.</li>
-    <li><strong>Systems Engineering:</strong> Building production-ready client-server interfaces using asynchronous socket communication, clean relational database layers (MySQL/SQLite), and low-level digital logic simulations.</li>
-  </ul>
-</div>
-
-<div class="about-section-block">
-  <h3>👥 Organizational Leadership & Mentorship</h3>
-  <p>True engineering involves guiding teams and optimizing human networks just as efficiently as computing systems. My operational experience includes:</p>
-  <ul>
-    <li><strong>Executive Leadership:</strong> Serving as the Vice Chair of the IEEE GUB Student Branch, orchestrating branding guidelines, digital content strategies, and tech community events.</li>
-    <li><strong>Academic Mentorship:</strong> Working as an official Student Mentor to accelerate the learning curves of junior undergraduates in structural programming, relational databases, and core coursework planning.</li>
-    <li><strong>Philanthropic Coordination:</strong> Directing volunteer teams and leading logistical awareness campaigns for regional community organizations.</li>
-  </ul>
-</div>
-
----
-
-### ⚡ Technical Coordinates
-* **Primary Stack:** Python, Java, C++, PHP, SQL, Assembly, LaTeX
-* **Key Specializations:** Deep Learning, Packet Analysis, OS Simulations, Desktop UI Development
-* **Interpersonal Assets:** Public Speaking, Institutional Anchoring, Group Governance, Technical Writing
+I believe technology should solve genuine problems — whether that's helping farmers identify crop disease early, making AI models more explainable, or improving safety on social platforms. I value clear communication, rigorous thinking, and the collaborative spirit of open-source and research communities.

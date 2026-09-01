@@ -1,0 +1,30 @@
+- title: "Robustness, Explainability, and Attribution Stability of Lightweight Vision Transformers for Federated Chest X-ray Classification under Non-IID Client Distributions"
+  type: "Undergraduate Thesis"
+  status: "Ongoing, 2026 – present"
+  organization: "Green University of Bangladesh"
+  github: "https://github.com/miad979"
+  description: "A federated binary-classification study for pleural effusion detection using NIH ChestX-ray14 across 10 simulated non-IID hospital clients."
+  key_points:
+    - "Comparing centralized, local-only, FedAvg, and FedProx training with DeiT-Tiny and ResNet-18"
+    - "Noisy-label robustness and attribution-stability analysis"
+    - "Grad-CAM and Vision Transformer attribution methods to evaluate explanation consistency across client distributions"
+
+- title: "Robustness and Tokenization Stability of Transformer Models for 12-Class Bangla Dialect Classification Under Character-Level Perturbations"
+  type: "Manuscript"
+  status: "Submitted — decision pending"
+  submit_date: "2026 IEEE 8th International Conference on Sustainable Technologies for Industry 5.0 (STI)"
+  decision: "Decision pending"
+  description: "Evaluated three Transformer models on 59,453 BanglaDial records under progressive character-level perturbations."
+  key_findings:
+    - "Multilingual DistilBERT was most robust at the 20% perturbation condition"
+    - "Typo-aware augmentation improved its accuracy from 51.005% to 62.913%"
+
+- title: "Multilevel Detection of Social Media Harassment Targeting Women"
+  type: "Research in Progress"
+  status: "Dataset development and text-classification model fine-tuning"
+  current: true
+  description: "Curating a multilevel dataset of social-media harassment targeting women and developing a structured labeling scheme for model training and evaluation."
+  key_points:
+    - "Multilevel dataset curation and a structured labeling scheme"
+    - "Fine-tuning a text-classification model"
+    - "Preparing the study for a future research manuscript, subject to experimental results"

@@ -1,44 +1,30 @@
 ---
-layout: default
-title: Contact
+layout: page
+title: "Contact & Connect"
 permalink: /contact/
+description: "Get in touch with me for collaboration, opportunities, or technical discussions."
 ---
 
-# Get In Touch
+I'm actively interested in:
 
-Have a project idea, a research collaboration, or an engineering opportunity? Drop me a message below, and I will get back to you as soon as possible.
+- Research collaborations and partnerships
+- Technical internships and full-time opportunities
+- Open-source contributions and community projects
+- Technical discussions about AI/ML, federated learning, and NLP
+- Mentorship and knowledge sharing
 
----
-
-<div class="contact-container" style="max-width: 600px; margin-top: 30px;">
-  <form action="https://formspree.io/f/your_formspree_id_here" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-    
-    <div>
-      <label style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px;">Full Name</label>
-      <input type="text" name="name" required style="width: 100%; padding: 10px; background: var(--bg-card, #1e1e1e); border: 1px solid var(--border-color, #333); border-radius: 6px; color: var(--text-main, #fff);">
-    </div>
-
-    <div>
-      <label style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px;">Email Address</label>
-      <input type="email" name="_replyto" required style="width: 100%; padding: 10px; background: var(--bg-card, #1e1e1e); border: 1px solid var(--border-color, #333); border-radius: 6px; color: var(--text-main, #fff);">
-    </div>
-
-    <div>
-      <label style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px;">Message</label>
-      <textarea name="message" rows="5" required style="width: 100%; padding: 10px; background: var(--bg-card, #1e1e1e); border: 1px solid var(--border-color, #333); border-radius: 6px; color: var(--text-main, #fff); resize: vertical;"></textarea>
-    </div>
-
-    <button type="submit" style="background: #007acc; color: white; padding: 12px 20px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: background 0.2s ease; max-width: 150px;">Send Message</button>
-
-  </form>
+<div class="contact-panel">
+  <p class="eyebrow">Get in touch</p>
+  <h2>The fastest way to reach me is email.</h2>
+  <p>Write about a project, a collaboration idea, or just say hello — I read every message.</p>
+  <a class="button button-primary" href="mailto:{{ site.email }}">Email {{ site.email }}</a>
 </div>
 
----
+**Phone:** {{ site.phone }}
+**Location:** {{ site.location }}
 
-### 🌐 Alternative Channels
+## Find me online
 
-If you prefer direct lines of communication, you can also reach me via:
-
-* **Email:** nijjon12@gmail.com[cite: 1]
-* **Professional Network:** [LinkedIn Profile](https://linkedin.com/in/md-miadul-islam-nizzan)[cite: 1]
-* **Open Source Frameworks:** [GitHub Handles](https://github.com/miad979)[cite: 1]
+- **GitHub:** [{{ site.github_username }}]({{ site.github_url }}) — projects and open-source work
+- **LinkedIn:** [Md Miadul Islam Nizzan]({{ site.linkedin_url }}) — professional profile and updates
+- **IEEE:** [IEEE Collabratec]({{ site.ieee_url }}) — research and academic networking

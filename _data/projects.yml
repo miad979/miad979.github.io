@@ -1,0 +1,86 @@
+# Each entry becomes one project card on /projects/ and, if featured: true,
+# also appears on the home page. See MAINTENANCE.md for the field guide.
+
+- title: "AI Research Assistant Agent"
+  description: "A multi-agent research system in which a manager agent coordinates Researcher, Analyst, and Writer agents to produce structured, source-attributed research briefs."
+  tags: ["Python", "LangChain", "Groq", "Tavily", "Streamlit"]
+  github: "https://github.com/miad979"
+  featured: true
+  highlights:
+    - "Web-search tool calling with role-specific prompts for each agent"
+    - "Explicit failure handling and saved reports"
+    - "Streamlit dashboard for execution tracking and research history"
+
+- title: "Smart Farming System: Bengali-First Agricultural Platform"
+  description: "A Bengali-first, local-first agricultural platform with a React/TypeScript frontend, a Node.js API, local JSON persistence, file uploads, and optional PostgreSQL/Supabase connectivity."
+  tags: ["React", "TypeScript", "Vite", "Node.js", "PostgreSQL", "Supabase"]
+  github: "https://github.com/miad979"
+  featured: true
+  highlights:
+    - "Plant-disease detection, automated irrigation control, and expert consultation workflows"
+    - "Market-price verification and multi-provider AI chat"
+    - "Bangla text-to-speech and real-time updates via Server-Sent Events"
+
+- title: "CogniSearch: Research-Oriented AI Chatbot"
+  description: "A modular conversational research workspace with specialized personas for AI/ML, cybersecurity, systems engineering, and general computer science."
+  tags: ["Python", "Streamlit", "Groq API", "Llama 3.3"]
+  github: "https://github.com/miad979"
+  highlights:
+    - "Temperature, Top-P, and token controls with persistent conversation state"
+    - "Markdown export and secure credential configuration"
+    - "UI and API/prompt modules kept separate for easy maintenance"
+
+- title: "Fosholer Bondhu: AI Agricultural Assistant"
+  description: "A mobile AI assistant for crop-disease identification and treatment guidance for farmers in Bangladesh, currently in development."
+  tags: ["Python", "TensorFlow", "Keras", "MobileNetV2", "TensorFlow Lite"]
+  github: "https://github.com/miad979"
+  highlights:
+    - "MobileNetV2 transfer-learning workflow for disease classification"
+    - "Structured for evaluation and TensorFlow Lite deployment on-device"
+
+- title: "Farm Operation & Transaction Management"
+  description: "An offline-first dairy-farm system covering animal health, vaccination, milk production, inventory, transactions, loans, and reporting."
+  tags: ["Flutter", "Django REST Framework", "JWT", "SQLite", "PostgreSQL"]
+  github: "https://github.com/miad979"
+  highlights:
+    - "Offline-first data model for use in low-connectivity settings"
+    - "End-to-end coverage from animal health records to financial reporting"
+
+- title: "Secure File Sharing & Cryptographic Verification"
+  description: "AES-128-CBC, RSA, and SHA-256 implemented from scratch in pure Python, plus role-based sharing, tamper simulation, audit logging, and automated tests."
+  tags: ["Python", "Flask", "AES-128-CBC", "RSA", "SHA-256"]
+  github: "https://github.com/miad979"
+  highlights:
+    - "Cryptographic primitives implemented from first principles, not library calls"
+    - "Role-based access control with tamper simulation and audit logging"
+
+- title: "LangChain RAG Agent Prototype"
+  description: "A data-connected Python agent built to evaluate rapid LangChain development against writing the same workflow with lower-level API code."
+  tags: ["Python", "LangChain", "RAG"]
+  github: "https://github.com/miad979"
+  highlights:
+    - "Compared development speed and control between LangChain and raw API calls"
+
+- title: "AI Communication Systems"
+  description: "A web chatbot built with Python sockets and the OpenAI API, plus a multi-user Java Swing messenger backed by SQLite with automated responses."
+  tags: ["Python", "Sockets", "OpenAI API", "Java Swing", "SQLite"]
+  github: "https://github.com/miad979"
+  highlights:
+    - "Real-time client-server communication over Python sockets"
+    - "Multi-user desktop messenger with local database-backed storage"
+
+- title: "Operating System Simulation"
+  description: "FCFS, SJF, and Round Robin CPU scheduling, memory paging, deadlock detection, and performance analysis, implemented in C/C++."
+  tags: ["C", "C++", "Algorithms", "Systems Programming"]
+  github: "https://github.com/miad979"
+  highlights:
+    - "Multiple CPU scheduling algorithms compared for performance"
+    - "Memory paging and deadlock detection simulated from scratch"
+
+- title: "Digital Logic & Embedded Systems"
+  description: "An ALU designed with a Python GUI, alongside concept work on pulse-rate detection, fire suppression, and sensor-driven irrigation."
+  tags: ["Python", "Digital Logic", "Embedded Systems"]
+  github: "https://github.com/miad979"
+  highlights:
+    - "Arithmetic Logic Unit with a graphical Python interface"
+    - "Early-stage sensor-driven concepts for health and safety monitoring"

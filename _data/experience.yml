@@ -1,0 +1,60 @@
+- title: "Vice Chair"
+  organization: "IEEE GUB Student Branch, Executive Committee"
+  location: "Green University of Bangladesh"
+  start_date: "2026"
+  end_date: "Present"
+  current: true
+  description: "Coordinate technical events, workshops, student initiatives, communications, and cross-team collaboration."
+  responsibilities:
+    - "Lead technical events and workshops"
+    - "Student initiatives and program coordination"
+    - "Cross-team collaboration and communications"
+
+- title: "Student Mentor"
+  organization: "Green University of Bangladesh"
+  location: "Rupganj, Narayanganj, Bangladesh"
+  start_date: "2025"
+  end_date: "Present"
+  current: true
+  description: "Guide junior students in academic planning, technical coursework, projects, GitHub, presentations, and documentation."
+  responsibilities:
+    - "Academic planning and coursework guidance"
+    - "Technical project mentorship"
+    - "GitHub and documentation training"
+    - "Presentation and communication skills"
+
+- title: "Assistant Graphic Designer"
+  organization: "IEEE GUB Student Branch, Executive Committee"
+  location: "Green University of Bangladesh"
+  start_date: "2025"
+  end_date: "2026"
+  current: false
+  description: "Supported branding, event promotion, technical program publicity, and digital content development."
+  responsibilities:
+    - "Event promotion graphics"
+    - "Technical program publicity materials"
+    - "Digital content development"
+
+- title: "Assistant Teacher"
+  organization: "Kolatoli Darus Sunnah Al Arabiah Madrashah"
+  location: "Rupganj, Dhaka, Bangladesh"
+  start_date: "2023"
+  end_date: "2024"
+  current: false
+  description: "Conducted structured lessons, mentored students, and developed instructional communication and classroom leadership skills."
+  responsibilities:
+    - "Structured lesson planning and delivery"
+    - "Student mentorship and support"
+    - "Classroom leadership and communication"
+
+- title: "Community Leadership"
+  organization: "Dhumketu Blood Foundation & Dhitpur Boys Club"
+  location: "Bangladesh"
+  start_date: "2020"
+  end_date: "2020"
+  current: false
+  description: "Served as Joint Organizing Secretary and Event Organizing Secretary, coordinating outreach, events, and volunteers."
+  responsibilities:
+    - "Event coordination and organization"
+    - "Volunteer management"
+    - "Community outreach programs"

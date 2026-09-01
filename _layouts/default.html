@@ -1,62 +1,38 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
     {% include meta.html %}
-
-    <!-- Search Engine Optimization (SEO) Meta Tags -->
-    <meta name="description" content="{{ site.description }}">
-    <meta name="author" content="{{ site.name }}">
-    
-    <!-- Open Graph Meta Tags (For Google Snippets & Social Card Previews) -->
-    <meta property="og:title" content="{{ site.name }}">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.name }}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="theme-color" content="#f4f1ea">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} · {% endif %}{{ site.name }}">
     <meta property="og:description" content="{{ site.description }}">
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="{{ site.url }}">
-    <meta property="og:image" content="{{ site.url }}/{{ site.avatar }}">
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}{{ site.avatar }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+    <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
   </head>
-
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <!-- Updated with dynamic absolute pathing to keep avatar live on subpages -->
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.url }}/{{ site.avatar }}" alt="{{ site.name }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            {% for link in site.navigation %}
-              <a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
-            {% endfor %}
-          </nav>
-        </header>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="{{ site.name }} home"><span class="wordmark-mark">MN</span><span class="wordmark-name">{{ site.short_name }}</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          {% for link in site.navigation %}<a href="{{ link.url | relative_url }}" {% if page.url == link.url %}aria-current="page"{% endif %}>{{ link.title }}</a>{% endfor %}
+          <a class="nav-cta" href="{{ '/contact/' | relative_url }}">Let’s talk <span aria-hidden="true">↗</span></a>
+        </nav>
       </div>
-    </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
+    </header>
+    <main id="main" class="shell page-content">{{ content }}</main>
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div><p class="footer-kicker">Have an idea worth building?</p><a class="footer-title" href="mailto:{{ site.email }}">Let’s make it real.</a></div>
+        <div class="footer-links"><a href="{{ site.github_url }}" target="_blank" rel="noopener">GitHub <span>↗</span></a><a href="{{ site.linkedin_url }}" target="_blank" rel="noopener">LinkedIn <span>↗</span></a><a href="mailto:{{ site.email }}">Email <span>↗</span></a></div>
       </div>
-    </div>
-
-    {% include analytics.html %}
+      <div class="shell footer-base"><span>© <span data-year></span> {{ site.name }}</span><span>Designed & built with care in Bangladesh.</span></div>
+    </footer>
   </body>
 </html>

@@ -1,22 +1,20 @@
 ---
 layout: page
-title: "IEEE Activities"
+title: "IEEE Leadership"
 permalink: /ieee/
+description: "IEEE membership and student branch leadership."
 ---
 
-### 🎖️ IEEE Leadership Experience
+## IEEE GUB Student Branch
 
-**IEEE Membership ID:** 101091506[cite: 2]
+**Vice Chair** · 2026 – Present
 
-* **Vice Chair** (Former Assistant Graphic Designer)  
-  *IEEE GUB Student Branch* | *2026 – 2027*[cite: 2]  
-  * Led and coordinated student activities, events, and technical programs[cite: 2].  
-  * Oversaw branding, event promotion, and digital content strategy[cite: 2].  
-  * Collaborated with executive members to improve organizational impact and engagement[cite: 2].
+- Coordinate technical events, workshops, student initiatives, communications, and cross-team collaboration.
 
-* **Assistant Graphic Designer**  
-  *IEEE GUB Student Branch* | *2025 – 2026*[cite: 2]  
-  * Contributed to branding, event promotion, and digital design initiatives[cite: 2].  
-  * Collaborated with executive members in organizing technical programs[cite: 2].
+**Assistant Graphic Designer** · 2025 – 2026
 
----
+- Supported branding, event promotion, technical program publicity, and digital content development.
+
+## Membership
+
+IEEE Member since 2025. IEEE Day Ambassador for 2025 and 2026, and a volunteer at the STI 2025 Conference.

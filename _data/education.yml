@@ -1,0 +1,21 @@
+- institution: "Green University of Bangladesh"
+  degree: "B.Sc. in Computer Science and Engineering"
+  status: "Expected January 2027"
+  cgpa: "3.70 / 4.00"
+  location: "Rupganj, Narayanganj, Bangladesh"
+  highlights:
+    - "Current CGPA: 3.70 / 4.00"
+    - "Dean's Award for outstanding academic performance"
+    - "Vice Chancellor's Award for academic excellence"
+
+- institution: "Royal Media College"
+  degree: "Higher Secondary Certificate (HSC)"
+  year: 2021
+  gpa: "4.89 / 5.00"
+  location: "Mymensingh, Bangladesh"
+
+- institution: "Shaheen Cadet School"
+  degree: "Secondary School Certificate (SSC)"
+  year: 2019
+  gpa: "4.72 / 5.00"
+  location: "Bhaluka, Mymensingh, Bangladesh"

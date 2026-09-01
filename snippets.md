@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "Code Snippets"
+title: Code Notes
 permalink: /snippets/
 ---
 
-### Technical Code Snippets
+## Practical references from my coursework and projects
 
-A collection of useful algorithms, network scripts, and database configurations.
+- **Operating-system simulations** — FCFS, SJF, and Round Robin scheduling implementations in C++.
+- **Socket programming** — client-server communication patterns in Python.
+- **Database helpers** — Java Swing CRUD workflows backed by MySQL and SQLite.
 
-* **Process Scheduling Simulations:** Implementation architectures for FCFS, SJF, and Round Robin in C++[cite: 2].
-* **Socket Programming:** Client-server socket code structures using Python[cite: 2].
-* **Database Helpers:** Clean Java Swing CRUD operations mapping to MySQL and SQLite[cite: 2].
+More documented examples will be published as the repositories are prepared for public use.
