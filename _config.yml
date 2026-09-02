@@ -37,6 +37,16 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 
+# jekyll-sitemap auto-generates /sitemap.xml on every build (bundled with
+# the github-pages gem, no extra install needed). robots.txt already
+# points at it.
+plugins:
+  - jekyll-sitemap
+
+# Once you verify ownership in Google Search Console (see MAINTENANCE.md),
+# paste the content value it gives you here — leave blank until then.
+google_site_verification: ""
+
 # Files/folders Jekyll should not publish to the live site.
 exclude:
   - "README.md"

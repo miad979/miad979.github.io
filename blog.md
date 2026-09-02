@@ -2,6 +2,7 @@
 layout: default
 title: Writing
 permalink: /blog/
+description: "Notes and write-ups by Md Miadul Islam Nizzan on AI/ML, NLP, and software engineering."
 ---
 
 # Notes from the workbench.

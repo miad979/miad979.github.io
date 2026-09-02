@@ -2,15 +2,7 @@
 <html lang="en">
   <head>
     {% include meta.html %}
-    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.name }}</title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
     <meta name="theme-color" content="#f4f1ea">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} · {% endif %}{{ site.name }}">
-    <meta property="og:description" content="{{ site.description }}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:image" content="{{ site.url }}{{ site.avatar }}">
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
     <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
   </head>

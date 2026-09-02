@@ -1,18 +1,52 @@
-    <meta charset="utf-8" />
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="robots" content="index, follow">
+{% if site.google_site_verification and site.google_site_verification != "" %}
+<meta name="google-site-verification" content="{{ site.google_site_verification }}">
+{% endif %}
 
-    {% if page.excerpt %}
-    <meta name="description" content="{{ page.excerpt| strip_html }}" />
-    <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
-    {% else %}
-    <meta name="description" content="{{ site.description }}">
-    <meta property="og:description" content="{{ site.description }}" />
-    {% endif %}
-    <meta name="author" content="{{ site.name }}" />
+{% assign page_title = site.name %}
+{% if page.title %}{% assign page_title = page.title | append: " · " | append: site.name %}{% endif %}
+{% assign page_description = site.description %}
+{% if page.description %}{% assign page_description = page.description %}{% elsif page.excerpt %}{% assign page_description = page.excerpt | strip_html | strip_newlines %}{% endif %}
 
-    {% if page.title %}
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="twitter:title" content="{{ page.title }}" />
-    {% endif %}
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ page_description }}">
+<meta name="author" content="{{ site.name }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ page_description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}{{ site.avatar }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="{{ page_description }}">
+<meta name="twitter:image" content="{{ site.url }}{{ site.avatar }}">
+
+<!-- Tells Google this page is specifically about the person named below,
+     which is what makes an exact-name search treat this site as the
+     authoritative result instead of a generic portfolio page. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.name }}",
+  "url": "{{ site.url }}/",
+  "image": "{{ site.url }}{{ site.avatar }}",
+  "jobTitle": "{{ site.role }}",
+  "email": "mailto:{{ site.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ site.location }}"
+  },
+  "sameAs": [
+    "{{ site.github_url }}",
+    "{{ site.linkedin_url }}"
+  ]
+}
+</script>
