@@ -50,6 +50,7 @@
   description: "AES-128-CBC, RSA, and SHA-256 implemented from scratch in pure Python, plus role-based sharing, tamper simulation, audit logging, and automated tests."
   tags: ["Python", "Flask", "AES-128-CBC", "RSA", "SHA-256"]
   github: "https://github.com/miad979/secure_file_sharing_system"
+  featured: true
   highlights:
     - "Cryptographic primitives implemented from first principles, not library calls"
     - "Role-based access control with tamper simulation and audit logging"
