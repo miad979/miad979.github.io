@@ -1,4 +1,3 @@
-# NOTE: the dates below are approximate placeholders — correct them to the real dates.
 # Newest first. Each item appears on the home page (latest 4) and on /news/.
 # Optional: url (makes the text a link)
 - date: 2026-09-01
@@ -9,3 +8,5 @@
   text: "Started my undergraduate thesis on robust, explainable federated chest X-ray classification with lightweight Vision Transformers."
 - date: 2025-10-01
   text: "Appointed **IEEE Day Ambassador** for the IEEE GUB Student Branch."
+- date: 2026-10-11
+  text: "Selected as **IEEE Day Ambassador** for 2026 at the IEEE GUB Student Branch."
