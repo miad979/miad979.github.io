@@ -1,0 +1,32 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{%- assign first = true -%}
+{%- for link in site.navigation -%}{%- unless first -%},{%- endunless -%}{%- assign first = false -%}
+{"title":{{ link.title | jsonify }},"type":"Page","url":{{ link.url | relative_url | jsonify }},"text":""}
+{%- endfor -%}
+,
+{"title":"News","type":"Page","url":{{ '/news/' | relative_url | jsonify }},"text":"updates announcements"},
+{"title":"Writing / Blog","type":"Page","url":{{ '/blog/' | relative_url | jsonify }},"text":"articles notes posts"},
+{"title":"IEEE Leadership","type":"Page","url":{{ '/ieee/' | relative_url | jsonify }},"text":"student branch vice chair ambassador"}
+{%- for p in site.data.projects -%}{%- assign tag_text = p.tags | join: ' ' -%},
+{"title":{{ p.title | jsonify }},"type":"Project","url":{{ '/projects/' | relative_url | jsonify }},"text":{{ p.description | append: ' ' | append: tag_text | jsonify }}}
+{%- endfor -%}
+{%- for r in site.data.research -%},
+{"title":{{ r.title | jsonify }},"type":"Research","url":{{ '/research/' | relative_url | jsonify }},"text":{{ r.description | jsonify }}}
+{%- endfor -%}
+{%- for pub in site.data.publications -%},
+{"title":{{ pub.title | jsonify }},"type":"Publication","url":{{ '/publications/' | relative_url | jsonify }},"text":{{ pub.venue | jsonify }}}
+{%- endfor -%}
+{%- for n in site.data.news -%},
+{"title":{{ n.text | remove: "**" | strip_html | jsonify }},"type":"News","url":{{ '/news/' | relative_url | jsonify }},"text":""}
+{%- endfor -%}
+{%- for post in site.posts -%},
+{"title":{{ post.title | jsonify }},"type":"Post","url":{{ post.url | relative_url | jsonify }},"text":{{ post.excerpt | strip_html | strip_newlines | jsonify }}}
+{%- endfor -%}
+{%- for s in site.data.skills -%},
+{"title":{{ s.category | jsonify }},"type":"Skills","url":{{ '/skills/' | relative_url | jsonify }},"text":{{ s.skills | join: ', ' | jsonify }}}
+{%- endfor -%}
+]

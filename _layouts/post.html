@@ -1,17 +1,14 @@
 ---
 layout: default
 ---
-
-<article class="post">
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
+<article class="post reveal">
+  <header class="page-header">
+    <p class="eyebrow">{{ page.date | date: "%B %-d, %Y" }}{% if page.categories.size > 0 %} · {{ page.categories | join: " / " }}{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+  </header>
+  <div class="entry post-body">
     {{ content }}
   </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
-
+  <p class="post-back"><a class="text-link" href="{{ '/blog/' | relative_url }}">← All posts</a></p>
   {% include disqus.html %}
 </article>

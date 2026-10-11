@@ -59,5 +59,7 @@ Computer Science and Engineering undergraduate with a strong academic record (3.
 
 ## Academic references
 
-1. **Mr. Syed Ahsanul Kabir** — Chairperson & Associate Professor, Department of CSE, Green University of Bangladesh · kabir@cse.green.edu.bd
-2. **Professor Dr. Md. Ahsan Habib** — Chairperson, Department of CSE, Bangladesh University of Business and Technology · ahsan.habib.tareq@gmail.com
+1. **Mr. Syed Ahsanul Kabir** — Chairperson & Associate Professor, Department of CSE, Green University of Bangladesh
+2. **Professor Dr. Md. Ahsan Habib** — Chairperson, Department of CSE, Bangladesh University of Business and Technology
+
+Referee contact details are available on request — please [email me]({{ 'mailto:' | append: site.email }}).

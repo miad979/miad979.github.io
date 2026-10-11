@@ -3,6 +3,7 @@ layout: page
 title: "Certifications & Training"
 permalink: /certifications/
 description: "Certifications and training."
+sitemap: false
 ---
 
 {% if site.data.certifications and site.data.certifications.size > 0 %}

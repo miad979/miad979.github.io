@@ -1,0 +1,7 @@
+{% assign news_items = site.data.news | sort: "date" | reverse %}
+{% if include.limit %}{% assign news_items = news_items | slice: 0, include.limit %}{% endif %}
+<ul class="news-list">
+{% for item in news_items %}
+  <li><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%b %Y" }}</time><span>{% if item.url %}<a href="{{ item.url }}">{{ item.text | markdownify | strip_html }}</a>{% else %}{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}{% endif %}</span></li>
+{% endfor %}
+</ul>

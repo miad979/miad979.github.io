@@ -46,9 +46,9 @@ confirmed. Once you know the repo, replace that line with the exact URL,
 e.g. `https://github.com/miad979/ai-research-assistant-agent`.
 
 ### Add research or a publication
-Edit `_data/research.yml`. Anything with `type: "Manuscript"` automatically
-appears on `/publications/` as well as `/research/` — you don't need to
-touch `publications.md`.
+Edit `_data/research.yml` for the research page, and `_data/publications.yml`
+for the `/publications/` page and the home-page "Selected publications"
+section. The two files are independent, so update both when a paper changes.
 
 ### Add a skill or category
 Edit `_data/skills.yml` — add a skill to an existing category's list, or add
@@ -132,3 +132,25 @@ than published under your name. A stray, unrelated auto-commit GitHub
 Action (`auto-notebook.yml`, which rewrote and pushed to the repo on every
 notebook upload) was also removed as an unnecessary source of fragility;
 say the word if you'd like a safer version of that automation back.
+
+## New features (added)
+
+| Feature | Where to edit |
+| :--- | :--- |
+| News timeline (home + `/news/`) | `_data/news.yml` — newest items appear first; **dates currently approximate, please correct** |
+| Publications with Abs / DOI / PDF / Code buttons | `_data/publications.yml` (`selected: true` shows it on the home page) |
+| Latest posts on home | Add a file `_posts/YYYY-MM-DD-title.md`; the section appears automatically |
+| Footer social icons | Fill `scholar_url`, `researchgate_url`, `orcid_url` in `_config.yml`; blank = hidden |
+| Dark / light mode | Toggle in the header; remembers the visitor's choice (`assets/js/site.js`, bottom of `style.scss`) |
+| `Ctrl+K` search | Index is generated from nav, projects, research, publications, news, skills and posts (`search.json`) |
+
+### Add a blog post
+Create `_posts/2026-10-12-my-first-post.md`:
+```markdown
+---
+layout: post
+title: "My first post"
+description: "One-line summary shown in lists"
+---
+Post content in Markdown…
+```

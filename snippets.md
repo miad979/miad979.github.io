@@ -3,6 +3,7 @@ layout: page
 title: Code Notes
 permalink: /snippets/
 description: "Short code notes and reference snippets by Md Miadul Islam Nizzan."
+sitemap: false
 ---
 
 ## Practical references from my coursework and projects

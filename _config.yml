@@ -15,6 +15,10 @@ github_url: "https://github.com/miad979"
 linkedin_username: "md-miadul-islam-nizzan-450b70262"
 linkedin_url: "https://www.linkedin.com/in/md-miadul-islam-nizzan-450b70262/"
 ieee_url: "https://collabratec.ieee.org"
+# Optional profiles — fill in to show icons in the footer, leave blank to hide.
+scholar_url: ""
+researchgate_url: ""
+orcid_url: ""
 resume_pdf: "/assets/resume.pdf"
 
 navigation:
@@ -26,6 +30,8 @@ navigation:
     url: /projects/
   - title: "Research"
     url: /research/
+  - title: "Publications"
+    url: /publications/
   - title: "Skills"
     url: /skills/
   - title: "Resume"

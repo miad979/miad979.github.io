@@ -4,7 +4,7 @@
 - title: "AI Research Assistant Agent"
   description: "A multi-agent research system in which a manager agent coordinates Researcher, Analyst, and Writer agents to produce structured, source-attributed research briefs."
   tags: ["Python", "LangChain", "Groq", "Tavily", "Streamlit"]
-  github: "https://github.com/miad979"
+  github: "https://github.com/miad979/Ai_Research_Agent"
   featured: true
   highlights:
     - "Web-search tool calling with role-specific prompts for each agent"
@@ -14,7 +14,7 @@
 - title: "Smart Farming System: Bengali-First Agricultural Platform"
   description: "A Bengali-first, local-first agricultural platform with a React/TypeScript frontend, a Node.js API, local JSON persistence, file uploads, and optional PostgreSQL/Supabase connectivity."
   tags: ["React", "TypeScript", "Vite", "Node.js", "PostgreSQL", "Supabase"]
-  github: "https://github.com/miad979"
+  github: "https://github.com/miad979/smart_farming"
   featured: true
   highlights:
     - "Plant-disease detection, automated irrigation control, and expert consultation workflows"
@@ -41,7 +41,7 @@
 - title: "Farm Operation & Transaction Management"
   description: "An offline-first dairy-farm system covering animal health, vaccination, milk production, inventory, transactions, loans, and reporting."
   tags: ["Flutter", "Django REST Framework", "JWT", "SQLite", "PostgreSQL"]
-  github: "https://github.com/miad979"
+  github: "https://github.com/miad979/Farm-operation-and-transection-management"
   highlights:
     - "Offline-first data model for use in low-connectivity settings"
     - "End-to-end coverage from animal health records to financial reporting"
@@ -49,7 +49,7 @@
 - title: "Secure File Sharing & Cryptographic Verification"
   description: "AES-128-CBC, RSA, and SHA-256 implemented from scratch in pure Python, plus role-based sharing, tamper simulation, audit logging, and automated tests."
   tags: ["Python", "Flask", "AES-128-CBC", "RSA", "SHA-256"]
-  github: "https://github.com/miad979"
+  github: "https://github.com/miad979/secure_file_sharing_system"
   highlights:
     - "Cryptographic primitives implemented from first principles, not library calls"
     - "Role-based access control with tamper simulation and audit logging"
