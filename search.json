@@ -15,7 +15,7 @@ permalink: /search.json
 {"title":{{ p.title | jsonify }},"type":"Project","url":{{ '/projects/' | relative_url | jsonify }},"text":{{ p.description | append: ' ' | append: tag_text | jsonify }}}
 {%- endfor -%}
 {%- for r in site.data.research -%},
-{"title":{{ r.title | jsonify }},"type":"Research","url":{{ '/research/' | relative_url | jsonify }},"text":{{ r.description | jsonify }}}
+{"title":{{ r.title | jsonify }},"type":"Research","url":{{ '/research/' | relative_url | jsonify }},"text":{{ r.type | append: ' ' | append: r.status | append: ' ' | append: r.description | jsonify }}}
 {%- endfor -%}
 {%- for pub in site.data.publications -%},
 {"title":{{ pub.title | jsonify }},"type":"Publication","url":{{ '/publications/' | relative_url | jsonify }},"text":{{ pub.venue | jsonify }}}
