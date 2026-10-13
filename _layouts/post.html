@@ -1,10 +1,22 @@
 ---
 layout: default
 ---
-<article class="post reveal">
+{% if page.notebook %}
+<link rel="stylesheet" href="{{ '/assets/css/notebook-syntax.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/notebook.css' | relative_url }}">
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:true},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code'] } };</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+{% endif %}
+<article class="post{% if page.notebook %} post-notebook{% endif %}">
   <header class="page-header">
-    <p class="eyebrow">{{ page.date | date: "%B %-d, %Y" }}{% if page.categories.size > 0 %} · {{ page.categories | join: " / " }}{% endif %}</p>
+    <p class="eyebrow">{{ page.date | date: "%B %-d, %Y" }}{% if page.read_time %} · {{ page.read_time }} min read{% endif %}{% if page.categories.size > 0 %} · {{ page.categories | join: " / " }}{% endif %}</p>
     <h1>{{ page.title }}</h1>
+    {% if page.notebook_path %}
+    <p class="nb-actions">
+      <a class="pub-btn" href="{{ '/' | append: page.notebook_path | relative_url }}" download>Download .ipynb</a>
+      <a class="pub-btn" href="https://colab.research.google.com/github/{{ site.github_username }}/{{ site.github_username }}.github.io/blob/master/{{ page.notebook_path }}" target="_blank" rel="noopener">Open in Colab</a>
+    </p>
+    {% endif %}
   </header>
   <div class="entry post-body">
     {{ content }}

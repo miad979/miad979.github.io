@@ -154,3 +154,20 @@ description: "One-line summary shown in lists"
 ---
 Post content in Markdown…
 ```
+
+## Notebook blog posts (automatic)
+
+Upload a Jupyter notebook and it becomes a blog post — no manual conversion.
+
+1. Put the `.ipynb` file in the `notebooks/` folder (GitHub: *Add file → Upload files*).
+   Name it `YYYY-MM-DD-my-title.ipynb` to set the post date.
+2. Commit. The GitHub Actions workflow runs `_tools/build_notebooks.py`, which turns
+   each notebook into a post (generated at build time — nothing to commit), then Jekyll builds the site.
+3. The post appears on `/blog/`, in the home page "Latest posts", and in `Ctrl+K` search.
+
+Title, summary, date and tags are taken from the notebook (first `# Heading`, first paragraph,
+file-name date). Override them in *Edit → Edit Notebook Metadata*:
+`{"title": "...", "description": "...", "date": "2026-06-02", "tags": ["ml"], "category": "Class"}`.
+Cell tags `remove_cell`, `hide_input` and `hide_output` hide parts of a cell.
+Posts include Download / Open-in-Colab buttons and render `$math$` with MathJax.
+A notebook that cannot be converted is skipped with a warning; it never breaks the site.

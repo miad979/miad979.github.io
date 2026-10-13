@@ -12,7 +12,7 @@ Ideas, experiments, and lessons from building intelligent systems and learning c
 <div class="writing-list">
 {% for post in site.posts %}
   <article class="writing-item">
-    <p class="eyebrow">{{ post.date | date: "%B %Y" }}{% if post.categories.size > 0 %} · {{ post.categories | join: " / " }}{% endif %}</p>
+    <p class="eyebrow">{{ post.date | date: "%B %Y" }}{% if post.read_time %} · {{ post.read_time }} min read{% endif %}{% if post.categories.size > 0 %} · {{ post.categories | join: " / " }}{% endif %}</p>
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 32 }}</p>
     <a class="text-link" href="{{ post.url | relative_url }}">Read article <span>→</span></a>
