@@ -32,6 +32,8 @@ navigation:
     url: /research/
   - title: "Publications"
     url: /publications/
+  - title: "Blog"
+    url: /blog/
   - title: "Skills"
     url: /skills/
   - title: "Resume"
