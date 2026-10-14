@@ -11,7 +11,9 @@ Optional notebook metadata (Edit > Edit Notebook Metadata in Jupyter):
 
 Without metadata:
     title        first '# Heading' of the notebook, else the file name
-    description  first plain paragraph of a markdown cell
+    description  a line "Summary: ..." in one of the first markdown cells
+                 (the line is hidden from the post), else the first full
+                 sentence-like paragraph, else a generic line
     date         YYYY-MM-DD prefix of the file name, else git first-commit date
     tags         ["jupyter"]
 
@@ -210,7 +212,25 @@ def first_heading(cells: list[dict]) -> str | None:
     return None
 
 
+SUMMARY_LINE = re.compile(r"^\s*(?:summary|description|abstract)\s*:\s*(.+?)\s*$", re.I)
+
+
+def explicit_summary(cells: list[dict]) -> str | None:
+    """A line 'Summary: ...' in the first few cells becomes the description."""
+    for cell in cells[:3]:
+        if cell.get("cell_type") != "markdown":
+            continue
+        lines = text_of(cell.get("source")).split("\n")
+        for i, line in enumerate(lines):
+            match = SUMMARY_LINE.match(line)
+            if match:
+                cell["source"] = "\n".join(lines[:i] + lines[i + 1:]).strip("\n")
+                return plain(match.group(1))
+    return None
+
+
 def first_paragraph(cells: list[dict]) -> str:
+    """First paragraph that reads like a sentence (not a label or a bullet fragment)."""
     for cell in cells:
         if cell.get("cell_type") != "markdown":
             continue
@@ -219,8 +239,9 @@ def first_paragraph(cells: list[dict]) -> str:
             if not block or block.startswith(("#", "```", "|", "![", "<", "---")):
                 continue
             text = plain(block)
-            if len(text) > 25:
-                return text if len(text) <= 160 else text[:157].rsplit(" ", 1)[0] + "…"
+            if text.endswith(":") or len(text) < 60 or len(text.split()) < 8:
+                continue
+            return text if len(text) <= 160 else text[:157].rsplit(" ", 1)[0] + "…"
     return ""
 
 
@@ -261,7 +282,12 @@ def convert(path: Path) -> str:
 
     date, stem = pick_date_and_stem(path, meta)
     title = meta.get("title") or first_heading(cells) or re.sub(r"[_-]+", " ", stem).strip()
-    description = meta.get("description") or first_paragraph(cells) or f"Jupyter notebook: {title}"
+    description = (
+        meta.get("description")
+        or explicit_summary(cells)
+        or first_paragraph(cells)
+        or f"{title} — a Jupyter notebook with code, results and notes."
+    )
     tags = meta.get("tags") or meta.get("keywords") or ["jupyter"]
     category = meta.get("category") or "Notebook"
     slug = re.sub(r"[^a-z0-9]+", "-", stem.lower()).strip("-") or "notebook"

@@ -165,8 +165,11 @@ Upload a Jupyter notebook and it becomes a blog post — no manual conversion.
    each notebook into a post (generated at build time — nothing to commit), then Jekyll builds the site.
 3. The post appears on `/blog/`, in the home page "Latest posts", and in `Ctrl+K` search.
 
-Title, summary, date and tags are taken from the notebook (first `# Heading`, first paragraph,
-file-name date). Override them in *Edit → Edit Notebook Metadata*:
+Title, summary, date and tags are taken from the notebook (first `# Heading`, first full
+sentence, file-name date). The easiest way to set the summary: add a line such as
+`Summary: One sentence about this notebook.` to one of the first markdown cells — it is used
+as the post description and hidden from the page. You can also override everything in
+*Edit → Edit Notebook Metadata*:
 `{"title": "...", "description": "...", "date": "2026-06-02", "tags": ["ml"], "category": "Class"}`.
 Cell tags `remove_cell`, `hide_input` and `hide_output` hide parts of a cell.
 Posts include Download / Open-in-Colab buttons and render `$math$` with MathJax.
