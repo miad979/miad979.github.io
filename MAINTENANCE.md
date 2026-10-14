@@ -174,3 +174,14 @@ as the post description and hidden from the page. You can also override everythi
 Cell tags `remove_cell`, `hide_input` and `hide_output` hide parts of a cell.
 Posts include Download / Open-in-Colab buttons and render `$math$` with MathJax.
 A notebook that cannot be converted is skipped with a warning; it never breaks the site.
+
+## Home page, CV and what is shown publicly
+
+- **Home page** is `index.html`. The highlights strip (projects, manuscript, awards, Vice Chair) is deliberately free of grades.
+- **Grades:** HSC/SSC results are hidden. They are commented out in `_data/education.yml`
+  (`# gpa: ...`) — remove the leading `# ` to show one again. The university CGPA is shown on the
+  About and Resume pages only.
+- **CV PDF** (`assets/resume.pdf`) is generated from the same data by `_tools/build_cv.py`
+  on every deploy, so the website and the PDF always agree. To regenerate it locally:
+  `pip install reportlab pyyaml` then `python _tools/build_cv.py`.
+- **Dark mode / colours / spacing** all come from the variables at the top of `style.scss`.

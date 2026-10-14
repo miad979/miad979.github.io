@@ -20,8 +20,8 @@ I'm actively interested in:
   <a class="button button-primary" href="mailto:{{ site.email }}">Email {{ site.email }}</a>
 </div>
 
-**Phone:** {{ site.phone }}
-**Location:** {{ site.location }}
+- **Phone:** {{ site.phone }}
+- **Location:** {{ site.location }}
 
 ## Find me online
 

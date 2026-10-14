@@ -1,23 +1,20 @@
-{% assign pubs = site.data.publications | sort: "year" | reverse %}
-{% if include.selected %}{% assign pubs = pubs | where: "selected", true %}{% endif %}
-{% if pubs.size > 0 %}
+{%- assign pubs = site.data.publications | sort: "year" | reverse -%}
+{%- if include.selected -%}{%- assign pubs = pubs | where: "selected", true -%}{%- endif -%}
+{%- if pubs.size > 0 -%}
 <ol class="pub-list">
-{% for pub in pubs %}
-  <li class="pub-item">
-    <div class="pub-meta"><span class="pub-year">{{ pub.year }}</span>{% if pub.status %}<span class="pub-status-badge">{{ pub.status }}</span>{% endif %}</div>
-    <h3 class="pub-title">{{ pub.title }}</h3>
-    <p class="pub-authors">{{ pub.authors | replace: site.name, "<strong>Md Miadul Islam Nizzan</strong>" }}</p>
-    <p class="pub-venue"><em>{{ pub.venue }}</em></p>
-    <div class="pub-buttons">
-      {% if pub.abstract %}<button type="button" class="pub-btn" data-abstract-toggle aria-expanded="false">Abs</button>{% endif %}
-      {% if pub.doi %}<a class="pub-btn" href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
-      {% if pub.pdf %}<a class="pub-btn" href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}
-      {% if pub.code %}<a class="pub-btn" href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
-    </div>
-    {% if pub.abstract %}<p class="pub-abstract" hidden>{{ pub.abstract }}</p>{% endif %}
-  </li>
-{% endfor %}
+{%- for pub in pubs %}
+<li class="pub-item">
+<div class="pub-meta"><span class="pub-year">{{ pub.year }}</span>{% if pub.status %}<span class="pub-status-badge">{{ pub.status }}</span>{% endif %}</div>
+<h3 class="pub-title">{{ pub.title }}</h3>
+<p class="pub-authors">{{ pub.authors | replace: site.name, "<strong>Md Miadul Islam Nizzan</strong>" }}</p>
+<p class="pub-venue"><em>{{ pub.venue }}</em></p>
+<div class="pub-buttons">{% if pub.abstract %}<button type="button" class="pub-btn" data-abstract-toggle aria-expanded="false">Abstract</button>{% endif %}{% if pub.doi %}<a class="pub-btn" href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}{% if pub.pdf %}<a class="pub-btn" href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}{% if pub.code %}<a class="pub-btn" href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>{% endif %}</div>
+{%- if pub.abstract %}
+<p class="pub-abstract" hidden>{{ pub.abstract }}</p>
+{%- endif %}
+</li>
+{%- endfor %}
 </ol>
-{% else %}
-<div class="empty-state"><p>No publications yet — add one in <code>_data/publications.yml</code>.</p></div>
-{% endif %}
+{%- else -%}
+<div class="empty-state"><p>No publications yet. Add one in <code>_data/publications.yml</code>.</p></div>
+{%- endif -%}

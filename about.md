@@ -49,16 +49,28 @@ Bangla natural language processing; social-media safety and online-harassment de
 {% endfor %}
 </div>
 
-## Awards & recognition
+## Awards & honors
 
 <div class="timeline">
-{% for award in site.data.awards %}
+{% for award in site.data.awards %}{% if award.category == "Academic" or award.category == "Competition" %}
   <div class="timeline-item">
     <p class="timeline-meta">{{ award.organization }}{% if award.year %} · {{ award.year }}{% endif %}</p>
     <h3>{{ award.title }}</h3>
     <p>{{ award.description }}</p>
   </div>
-{% endfor %}
+{% endif %}{% endfor %}
+</div>
+
+## Memberships & service
+
+<div class="timeline">
+{% for award in site.data.awards %}{% if award.category != "Academic" and award.category != "Competition" %}
+  <div class="timeline-item">
+    <p class="timeline-meta">{{ award.organization }}{% if award.year %} · {{ award.year }}{% endif %}</p>
+    <h3>{{ award.title }}</h3>
+    <p>{{ award.description }}</p>
+  </div>
+{% endif %}{% endfor %}
 </div>
 
 ## What drives me

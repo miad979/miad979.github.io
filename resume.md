@@ -5,14 +5,15 @@ permalink: /resume/
 description: "My professional resume and curriculum vitae."
 ---
 
-**{{ site.name }}**
-{{ site.role }}
-📧 {{ site.email }} · 📱 {{ site.phone }} · 📍 {{ site.location }}
-
-[GitHub]({{ site.github_url }}) · [LinkedIn]({{ site.linkedin_url }}) · [IEEE Collabratec]({{ site.ieee_url }})
+<div class="resume-head">
+<h2>{{ site.name }}</h2>
+<p class="resume-role">{{ site.role }}</p>
+<p class="resume-contact">{{ site.email }} · {{ site.phone }} · {{ site.location }}</p>
+<p class="resume-contact"><a href="{{ site.github_url }}">GitHub</a> · <a href="{{ site.linkedin_url }}">LinkedIn</a> · <a href="{{ site.ieee_url }}">IEEE Collabratec</a></p>
+</div>
 
 <div class="resume-actions">
-  <a class="button button-primary" href="{{ site.resume_pdf | relative_url }}" target="_blank">Download PDF</a>
+  <a class="button button-primary" href="{{ site.resume_pdf | relative_url }}" target="_blank" rel="noopener">Download PDF</a>
 </div>
 
 ---
@@ -23,11 +24,15 @@ Computer Science and Engineering undergraduate with a strong academic record (3.
 
 ## Education
 
+<div class="timeline">
 {% for entry in site.data.education %}
-**{{ entry.degree }}** — {{ entry.institution }}
-{{ entry.location }} · {{ entry.year | default: entry.status }}{% if entry.cgpa %} · CGPA {{ entry.cgpa }}{% endif %}{% if entry.gpa %} · GPA {{ entry.gpa }}{% endif %}
-
+<div class="timeline-item">
+<p class="timeline-meta">{{ entry.year | default: entry.status }}</p>
+<h3>{{ entry.degree }}</h3>
+<p>{{ entry.institution }} · {{ entry.location }}{% if entry.cgpa %} · CGPA {{ entry.cgpa }}{% endif %}{% if entry.gpa %} · GPA {{ entry.gpa }}{% endif %}</p>
+</div>
 {% endfor %}
+</div>
 
 ## Undergraduate thesis (ongoing)
 
@@ -46,11 +51,15 @@ Computer Science and Engineering undergraduate with a strong academic record (3.
 
 ## Experience & leadership
 
-{% for role in site.data.experience %}**{{ role.title }}** — {{ role.organization }}
-{{ role.location }} · {{ role.start_date }} – {{ role.end_date }}
-{{ role.description }}
-
+<div class="timeline">
+{% for role in site.data.experience %}
+<div class="timeline-item">
+<p class="timeline-meta">{{ role.start_date }} – {{ role.end_date }}</p>
+<h3>{{ role.title }} · {{ role.organization }}</h3>
+<p>{{ role.description }}</p>
+</div>
 {% endfor %}
+</div>
 
 ## Awards, membership & academic service
 

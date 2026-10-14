@@ -29,10 +29,11 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Convert notebooks to blog posts
+      - name: Generate blog posts from notebooks and the CV PDF
         run: |
-          python -m pip install --quiet markdown-it-py pygments
+          python -m pip install --quiet markdown-it-py pygments reportlab pyyaml
           python _tools/build_notebooks.py
+          python _tools/build_cv.py || echo "CV generation failed - keeping the committed assets/resume.pdf"
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1

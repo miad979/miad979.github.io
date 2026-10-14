@@ -1,8 +1,21 @@
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.site-nav');
-if (menuButton && navigation) { menuButton.addEventListener('click', () => { const open = menuButton.getAttribute('aria-expanded') === 'true'; menuButton.setAttribute('aria-expanded', String(!open)); navigation.classList.toggle('is-open', !open); }); }
+function setMenu(open) {
+  if (!menuButton || !navigation) return;
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  navigation.classList.toggle('is-open', open);
+  document.body.classList.toggle('no-scroll', open);
+}
+if (menuButton && navigation) {
+  menuButton.setAttribute('aria-label', 'Open navigation');
+  menuButton.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
+  navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+  window.matchMedia('(min-width: 1240px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
+}
 document.querySelectorAll('[data-year]').forEach((node) => { node.textContent = new Date().getFullYear(); });
-if ('IntersectionObserver' in window) { const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.12 }); document.querySelectorAll('.reveal').forEach((element) => observer.observe(element)); } else { document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible')); }
+if ('IntersectionObserver' in window) { const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.05 }); document.querySelectorAll('.reveal').forEach((element) => observer.observe(element)); } else { document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible')); }
 
 /* ---------- Dark / light theme ---------- */
 document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
