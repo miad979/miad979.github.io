@@ -1,6 +1,16 @@
 # Each entry becomes one project card on /projects/ and, if featured: true,
 # also appears on the home page. See MAINTENANCE.md for the field guide.
 
+- title: "Orbit: AI Job Agent"
+  description: "A private job-search workspace built around a real agent loop (discover, match, tailor, human approval, track) that scores live listings against your resume and drafts tailored cover letters for review."
+  tags: ["TypeScript", "Vite", "Node.js", "SQLite", "Groq"]
+  github: "https://github.com/miad979/AI-job-agent"
+  highlights:
+    - "Agent loop that searches live listings, scores each against the user's resume, and queues de-duplicated drafts for review"
+    - "Human approval gate: nothing is marked submitted until the user confirms, and there is no auto-submission to third-party boards"
+    - "Truthful tailoring from resume facts only, with Groq/Ollama or a deterministic template fallback"
+    - "bcrypt auth, hashed 14-day sessions, login rate limiting, per-user data scoping and 17 automated API/unit tests"
+
 - title: "AI Research Assistant Agent"
   description: "A multi-agent research system in which a manager agent coordinates Researcher, Analyst, and Writer agents to produce structured, source-attributed research briefs."
   tags: ["Python", "LangChain", "Groq", "Tavily", "Streamlit"]

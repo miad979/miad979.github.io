@@ -24,7 +24,7 @@ from reportlab.platypus import HRFlowable, KeepTogether, Paragraph, SimpleDocTem
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets" / "resume.pdf"
 INK, MUTED, ACCENT, RULE = colors.HexColor("#13201b"), colors.HexColor("#56615b"), colors.HexColor("#1d493c"), colors.HexColor("#c9cfc9")
-MAX_PROJECTS = 6
+MAX_PROJECTS = 7
 
 SUMMARY = (
     "Final-year Computer Science and Engineering undergraduate at Green University of Bangladesh with applied research and project experience in machine learning, Bangla NLP, and computer vision. Skilled in Python-based data preparation, Transformer experimentation, image classification, and model evaluation. Experienced in developing AI-enabled applications and communicating technical work through research writing, documentation, mentoring, and presentations."
