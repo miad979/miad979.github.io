@@ -20,11 +20,10 @@ I'm actively interested in:
   <a class="button button-primary" href="mailto:{{ site.email }}">Email {{ site.email }}</a>
 </div>
 
-- **Phone:** {{ site.phone }}
 - **Location:** {{ site.location }}
 
 ## Find me online
 
 - **GitHub:** [{{ site.github_username }}]({{ site.github_url }}) — projects and open-source work
 - **LinkedIn:** [Md Miadul Islam Nizzan]({{ site.linkedin_url }}) — professional profile and updates
-- **IEEE:** [IEEE Collabratec]({{ site.ieee_url }}) — research and academic networking
+{% if site.ieee_url and site.ieee_url != "" %}- **IEEE:** [IEEE Collabratec]({{ site.ieee_url }}) — research and academic networking{% endif %}

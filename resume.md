@@ -8,8 +8,8 @@ description: "My professional resume and curriculum vitae."
 <div class="resume-head">
 <h2>{{ site.name }}</h2>
 <p class="resume-role">{{ site.role }}</p>
-<p class="resume-contact">{{ site.email }} · {{ site.phone }} · {{ site.location }}</p>
-<p class="resume-contact"><a href="{{ site.github_url }}">GitHub</a> · <a href="{{ site.linkedin_url }}">LinkedIn</a> · <a href="{{ site.ieee_url }}">IEEE Collabratec</a></p>
+<p class="resume-contact">{{ site.email }} · {{ site.location }}</p>
+<p class="resume-contact"><a href="{{ site.github_url }}">GitHub</a> · <a href="{{ site.linkedin_url }}">LinkedIn</a>{% if site.ieee_url and site.ieee_url != "" %} · <a href="{{ site.ieee_url }}">IEEE Collabratec</a>{% endif %}</p>
 </div>
 
 <div class="resume-actions">

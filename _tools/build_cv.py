@@ -81,7 +81,7 @@ def build() -> Path:
     # ---- header
     story.append(Paragraph(e(cfg["name"]), st["name"]))
     story.append(Paragraph(e(cfg["role"]), st["role"]))
-    story.append(Paragraph(f'{e(cfg["email"])}  |  {e(cfg["phone"])}  |  {e(cfg["location"])}', st["contact"]))
+    story.append(Paragraph(f'{e(cfg["email"])}  |  {e(cfg["location"])}', st["contact"]))
     links = [("GitHub", cfg.get("github_url")), ("LinkedIn", cfg.get("linkedin_url")), ("IEEE Collabratec", cfg.get("ieee_url"))]
     story.append(Paragraph("  |  ".join(f'<a href="{e(u)}" color="#1d493c">{n}</a>' for n, u in links if u), st["contact"]))
 

@@ -185,3 +185,9 @@ A notebook that cannot be converted is skipped with a warning; it never breaks t
   on every deploy, so the website and the PDF always agree. To regenerate it locally:
   `pip install reportlab pyyaml` then `python _tools/build_cv.py`.
 - **Dark mode / colours / spacing** all come from the variables at the top of `style.scss`.
+
+## Contact details shown publicly
+
+- The phone number is intentionally not published anywhere (site or CV). Share it privately when asked.
+- `ieee_url` in `_config.yml` is blank, so the IEEE icon and links are hidden. Paste your personal
+  IEEE Collabratec profile URL there to show them again.
