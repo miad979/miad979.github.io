@@ -2,7 +2,7 @@
   type: "Undergraduate Thesis"
   status: "Ongoing, 2026 – present"
   organization: "Green University of Bangladesh"
-  github: "https://github.com/miad979"
+  github: "https://github.com/miad979/Research"
   description: "A federated binary-classification study for pleural effusion detection using NIH ChestX-ray14 across 10 simulated non-IID hospital clients."
   key_points:
     - "Comparing centralized, local-only, FedAvg, and FedProx training with DeiT-Tiny and ResNet-18"
@@ -14,7 +14,7 @@
   status: "Submitted — decision pending"
   submit_date: "2026 IEEE 8th International Conference on Sustainable Technologies for Industry 5.0 (STI)"
   decision: "Decision pending"
-  description: "Evaluated three Transformer models on 59,453 BanglaDial records under progressive character-level perturbations."
+  description: "Evaluated BanglaBERT, multilingual DistilBERT and XLM-RoBERTa on 59,453 BanglaDial records under progressive 0–20% character-level perturbations."
   key_findings:
     - "Multilingual DistilBERT was most robust at the 20% perturbation condition"
     - "Typo-aware augmentation improved its accuracy from 51.005% to 62.913%"

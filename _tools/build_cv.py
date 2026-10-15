@@ -27,10 +27,7 @@ INK, MUTED, ACCENT, RULE = colors.HexColor("#13201b"), colors.HexColor("#56615b"
 MAX_PROJECTS = 6
 
 SUMMARY = (
-    "Computer Science and Engineering undergraduate with project experience spanning artificial intelligence, "
-    "machine learning, natural language processing, computer vision, multi-agent systems, software engineering, "
-    "networking, cybersecurity, and embedded systems. Combines research-oriented development with student "
-    "mentoring, IEEE leadership, technical documentation, and collaborative program delivery."
+    "Final-year Computer Science and Engineering undergraduate at Green University of Bangladesh with applied research and project experience in machine learning, Bangla NLP, and computer vision. Skilled in Python-based data preparation, Transformer experimentation, image classification, and model evaluation. Experienced in developing AI-enabled applications and communicating technical work through research writing, documentation, mentoring, and presentations."
 )
 
 
@@ -99,7 +96,8 @@ def build() -> Path:
     section("Research")
     for item in load("research"):
         status = item.get("status", "")
-        block = [row(e(item["title"]), "", left_style="bold"), Paragraph(f'{e(item.get("type", ""))} · {e(status)}', st["muted"]), Paragraph(e(item.get("description", "")), st["body"])]
+        repo = f'<a href="{e(item["github"])}" color="#1d493c">GitHub</a>' if item.get("github") else ""
+        block = [row(e(item["title"]), repo, left_style="bold"), Paragraph(f'{e(item.get("type", ""))} · {e(status)}', st["muted"]), Paragraph(e(item.get("description", "")), st["body"])]
         block += bullets((item.get("key_points") or []) + (item.get("key_findings") or []))
         story.append(KeepTogether(block + [Spacer(1, 3)]))
 
@@ -111,7 +109,12 @@ def build() -> Path:
 
     section("Selected projects")
     for proj in load("projects")[:MAX_PROJECTS]:
-        link = f'<a href="{e(proj["github"])}" color="#1d493c">GitHub</a>' if proj.get("github") and proj["github"].rstrip("/").count("/") > 3 else ""
+        parts = []
+        if proj.get("github"):
+            parts.append(f'<a href="{e(proj["github"])}" color="#1d493c">GitHub</a>')
+        if proj.get("demo"):
+            parts.append(f'<a href="{e(proj["demo"])}" color="#1d493c">Live demo</a>')
+        link = " | ".join(parts)
         tags = e(", ".join(proj.get("tags", [])[:5]))
         points = proj.get("highlights") or [proj.get("description", "")]
         story.append(KeepTogether([row(e(proj["title"]), link, sub=tags)] + bullets(points[:2]) + [Spacer(1, 3)]))

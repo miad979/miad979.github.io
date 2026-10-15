@@ -20,7 +20,7 @@ description: "My professional resume and curriculum vitae."
 
 ## Professional summary
 
-Computer Science and Engineering undergraduate with a strong academic record (3.70/4.00 CGPA) and project experience spanning artificial intelligence, machine learning, natural language processing, computer vision, multi-agent systems, software engineering, networking, cybersecurity, and embedded systems. Combines research-oriented development with student mentoring, IEEE leadership, and collaborative technical initiatives.
+Final-year Computer Science and Engineering undergraduate at Green University of Bangladesh with applied research and project experience in machine learning, Bangla NLP, and computer vision. Skilled in Python-based data preparation, Transformer experimentation, image classification, and model evaluation. Experienced in developing AI-enabled applications and communicating technical work through research writing, documentation, mentoring, and presentations.
 
 ## Education
 
@@ -69,6 +69,6 @@ Computer Science and Engineering undergraduate with a strong academic record (3.
 ## Academic references
 
 1. **Mr. Syed Ahsanul Kabir** — Chairperson & Associate Professor, Department of CSE, Green University of Bangladesh
-2. **Professor Dr. Md. Ahsan Habib** — Chairperson, Department of CSE, Bangladesh University of Business and Technology
+2. **Md. Ataullha** — Lecturer, Department of CSE, Green University of Bangladesh; former AI Engineer, Synesis IT PLC
 
 Referee contact details are available on request — please [email me]({{ 'mailto:' | append: site.email }}).

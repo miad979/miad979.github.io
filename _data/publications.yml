@@ -7,7 +7,7 @@
   year: 2026
   status: "Submitted — decision pending"
   selected: true
-  abstract: "Evaluates three Transformer models on 59,453 BanglaDial records under progressive character-level perturbations. Multilingual DistilBERT was the most robust at the 20% perturbation condition, and typo-aware augmentation improved its accuracy from 51.005% to 62.913%."
+  abstract: "Evaluates BanglaBERT, multilingual DistilBERT and XLM-RoBERTa on 59,453 BanglaDial records under progressive 0–20% character-level perturbations. Multilingual DistilBERT was the most robust at the 20% perturbation condition, and typo-aware augmentation improved its accuracy from 51.005% to 62.913%."
   # doi: ""
   # pdf: ""
   # code: ""

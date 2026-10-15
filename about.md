@@ -9,7 +9,7 @@ I'm {{ site.name }}, a Computer Science and Engineering undergraduate at Green U
 
 ## Background
 
-I'm currently pursuing my B.Sc. in Computer Science and Engineering, expected January 2027, with a current CGPA of 3.70 / 4.00. I've been recognized with both the Vice Chancellor's Award and the Dean's Award for academic performance at Green University of Bangladesh.
+I'm currently pursuing my B.Sc. in Computer Science and Engineering, expected January 2027, with a current CGPA of {% assign uni = site.data.education | first %}{{ uni.cgpa }}. I've been recognized with both the Vice Chancellor's Award and the Dean's Award for academic performance at Green University of Bangladesh.
 
 Beyond coursework, I serve as **Vice Chair of the IEEE GUB Student Branch** and as a **Student Mentor**, guiding junior students through academic planning, technical coursework, and project work.
 

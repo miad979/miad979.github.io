@@ -5,6 +5,7 @@
   description: "A multi-agent research system in which a manager agent coordinates Researcher, Analyst, and Writer agents to produce structured, source-attributed research briefs."
   tags: ["Python", "LangChain", "Groq", "Tavily", "Streamlit"]
   github: "https://github.com/miad979/Ai_Research_Agent"
+  demo: "https://airesearchagent-miad979.streamlit.app/"
   featured: true
   highlights:
     - "Web-search tool calling with role-specific prompts for each agent"
@@ -24,7 +25,7 @@
 - title: "CogniSearch: Research-Oriented AI Chatbot"
   description: "A modular conversational research workspace with specialized personas for AI/ML, cybersecurity, systems engineering, and general computer science."
   tags: ["Python", "Streamlit", "Groq API", "Llama 3.3"]
-  github: "https://github.com/miad979"
+  github: "https://github.com/miad979/Research_Oriented_Chatbot"
   highlights:
     - "Temperature, Top-P, and token controls with persistent conversation state"
     - "Markdown export and secure credential configuration"
@@ -33,7 +34,7 @@
 - title: "Fosholer Bondhu: AI Agricultural Assistant"
   description: "A mobile AI assistant for crop-disease identification and treatment guidance for farmers in Bangladesh, currently in development."
   tags: ["Python", "TensorFlow", "Keras", "MobileNetV2", "TensorFlow Lite"]
-  github: "https://github.com/miad979"
+  github: "https://github.com/miad979/fosholer-bondhu"
   highlights:
     - "MobileNetV2 transfer-learning workflow for disease classification"
     - "Structured for evaluation and TensorFlow Lite deployment on-device"
@@ -58,14 +59,12 @@
 - title: "LangChain RAG Agent Prototype"
   description: "A data-connected Python agent built to evaluate rapid LangChain development against writing the same workflow with lower-level API code."
   tags: ["Python", "LangChain", "RAG"]
-  github: "https://github.com/miad979"
   highlights:
     - "Compared development speed and control between LangChain and raw API calls"
 
 - title: "AI Communication Systems"
   description: "A web chatbot built with Python sockets and the OpenAI API, plus a multi-user Java Swing messenger backed by SQLite with automated responses."
   tags: ["Python", "Sockets", "OpenAI API", "Java Swing", "SQLite"]
-  github: "https://github.com/miad979"
   highlights:
     - "Real-time client-server communication over Python sockets"
     - "Multi-user desktop messenger with local database-backed storage"
@@ -73,7 +72,6 @@
 - title: "Operating System Simulation"
   description: "FCFS, SJF, and Round Robin CPU scheduling, memory paging, deadlock detection, and performance analysis, implemented in C/C++."
   tags: ["C", "C++", "Algorithms", "Systems Programming"]
-  github: "https://github.com/miad979"
   highlights:
     - "Multiple CPU scheduling algorithms compared for performance"
     - "Memory paging and deadlock detection simulated from scratch"
@@ -81,7 +79,6 @@
 - title: "Digital Logic & Embedded Systems"
   description: "An ALU designed with a Python GUI, alongside concept work on pulse-rate detection, fire suppression, and sensor-driven irrigation."
   tags: ["Python", "Digital Logic", "Embedded Systems"]
-  github: "https://github.com/miad979"
   highlights:
     - "Arithmetic Logic Unit with a graphical Python interface"
     - "Early-stage sensor-driven concepts for health and safety monitoring"
