@@ -106,6 +106,7 @@ html[data-theme='dark'] .button-primary:hover { background: #dcf79f; color: var(
 .site-header::before { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; background: var(--header-bg); -webkit-backdrop-filter: saturate(160%) blur(16px); backdrop-filter: saturate(160%) blur(16px); }
 .header-inner { display: flex; align-items: center; gap: 20px; height: var(--header-h); }
 .wordmark { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font: 800 16px/1 var(--font-head); letter-spacing: -0.02em; white-space: nowrap; }
+.wordmark-avatar { flex: none; width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--lime); background: var(--surface-2); }
 .wordmark-mark { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--lime); color: var(--on-lime); font-size: 12.5px; letter-spacing: -0.03em; }
 .site-nav { display: flex; align-items: center; gap: clamp(14px, 1.5vw, 20px); margin-left: auto; }
 .site-nav a { position: relative; white-space: nowrap; padding: 8px 0; text-decoration: none; font: 600 14px/1 var(--font-body); color: var(--muted); transition: color 0.2s; }
@@ -364,6 +365,7 @@ html[data-theme='dark'] .contact-panel p { color: #2b3a33; }
   :root { --header-h: 64px; }
   .wordmark-name { font-size: 15px; }
   .wordmark-mark { width: 36px; height: 36px; }
+  .wordmark-avatar { width: 38px; height: 38px; }
   .featured-grid, .focus-grid { grid-template-columns: minmax(0, 1fr); }
   .hero-actions .button { flex: 1 1 100%; }
   .news-list li { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 16px 0; }
