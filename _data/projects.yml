@@ -5,6 +5,7 @@
   description: "A private job-search workspace built around a real agent loop (discover, match, tailor, human approval, track) that scores live listings against your resume and drafts tailored cover letters for review."
   tags: ["TypeScript", "Vite", "Node.js", "SQLite", "Groq"]
   github: "https://github.com/miad979/AI-job-agent"
+  featured: true
   highlights:
     - "Agent loop that searches live listings, scores each against the user's resume, and queues de-duplicated drafts for review"
     - "Human approval gate: nothing is marked submitted until the user confirms, and there is no auto-submission to third-party boards"
@@ -61,7 +62,6 @@
   description: "AES-128-CBC, RSA, and SHA-256 implemented from scratch in pure Python, plus role-based sharing, tamper simulation, audit logging, and automated tests."
   tags: ["Python", "Flask", "AES-128-CBC", "RSA", "SHA-256"]
   github: "https://github.com/miad979/secure_file_sharing_system"
-  featured: true
   highlights:
     - "Cryptographic primitives implemented from first principles, not library calls"
     - "Role-based access control with tamper simulation and audit logging"
